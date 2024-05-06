@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Models\Blog;
+namespace App\Models\Portfolio;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\{Model, SoftDeletes};
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
-use Illuminate\Database\Eloquent\Relations\{BelongsTo};
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Thumbnail extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = 'blog_thumbnails';
+    protected $table = 'portfolio_thumbnails';
 
     protected $guarded = [
         'id'
@@ -19,12 +19,12 @@ class Thumbnail extends Model
 
 
     /**
-     * Get blog of the thumbnail
+     * Get portfolio of the thumbnail
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function blog() :BelongsTo
+    public function portfolio() :BelongsTo
     {
-        return $this->belongsTo(Blog::class);
+        return $this->belongsTo(Portfolio::class);
     }
 }

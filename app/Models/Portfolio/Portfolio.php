@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Models\Blog;
+namespace App\Models\Portfolio;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\{Model, SoftDeletes};
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
-use Illuminate\Database\Eloquent\Relations\{HasOne};
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Blog extends Model
+class Portfolio extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = 'blogs';
+    protected $table = 'portfolios';
 
     protected $guarded = [
         'id'
@@ -19,12 +19,12 @@ class Blog extends Model
 
     
     /**
-     * Get thumbnail of the blog 
+     * Get thumbnail of the portfolio 
      * 
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function thumbnail() :HasOne
     {
-        return $this->hasOne(Thumbnail::class, 'blog_id');
+        return $this->hasOne(Thumbnail::class, 'portfolio_id');
     }
 }

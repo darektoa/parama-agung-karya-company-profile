@@ -1,4 +1,4 @@
-<div class="mockup-window h-full w-full border bg-base-300">
+<div class="mockup-window h-full min-h-[36rem] w-full bg-base-300">
     <div class="jus group relative flex h-full w-full bg-base-200">
         <input
             type="checkbox"

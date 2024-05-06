@@ -5,23 +5,23 @@ namespace App\Http\Controllers\Web\Dashboard;
 use App\Helpers\CollectionHelper;
 use App\Helpers\StorageHelper;
 use App\Http\Controllers\Controller;
-use App\Models\Blog\Blog;
+use App\Models\Portfolio\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class BlogController extends Controller
+class PortfolioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $blogs = Blog::with('thumbnail')
+        $portfolios = Portfolio::with(['thumbnail'])
             ->latest()
             ->get();
-        
-        return view('pages.dashboard.blogs.index')
-            ->with('blogs', $blogs);
+
+        return view('pages.dashboard.portfolios.index')
+            ->with('portfolios', $portfolios);
     }
 
     /**
@@ -29,7 +29,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.blogs.create.index');
+        return view('pages.dashboard.portfolios.create.index');
     }
 
     /**
@@ -40,16 +40,16 @@ class BlogController extends Controller
         try {
             $thumbnail = $request->file('thumbnail');
             
-            $blog = Blog::create([
+            $portfolio = Portfolio::create([
                 'title' => $request->title,
                 'slug'  => Str::slug($request->title) . Str::random(4),
                 'content' => $request->content,
             ]);
 
             if($thumbnail->isReadable()) {
-                $thumbnailUri = StorageHelper::putPublic('/blogs/thumbnails', $thumbnail);
-                $blog->thumbnail()->create([
-                    'uri' => $thumbnailUri,
+                $thumbnailURI = StorageHelper::putPublic('/portfolios/thumbnails', $thumbnail);
+                $portfolio->thumbnail()->create([
+                    'uri' => $thumbnailURI,
                 ]);
             }
 
@@ -64,51 +64,50 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $blogId)
+    public function show(string $portfolioId)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $blogId)
+    public function edit(string $portfolioId)
     {
-        $blog = Blog::findOrFail($blogId);
+        $portfolio = Portfolio::findOrFail($portfolioId);
 
-        return view('pages.dashboard.blogs.edit.index')
-            ->with('blog', $blog);
+        return view('pages.dashboard.portfolios.edit.index')
+            ->with('portfolio', $portfolio);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $blogId)
+    public function update(Request $request, string $portfolioId)
     {
         try {
-            $blog = Blog::findOrFail($blogId);
-            $data = CollectionHelper::getOrOld($request, $blog);
+            $portfolio = Portfolio::findOrFail($portfolioId);
+            $data = CollectionHelper::getOrOld($request, $portfolio);
             
-            if($data) $blog->update($data->only([
+            if($data) $portfolio->update($data->only([
                 'title',
                 'content'
             ])->toArray());
                 
             if($thumbnail = $request->file('thumbnail')) {
-                if($oldThumbnail = $blog->thumbnail) {
+                if($oldThumbnail = $portfolio->thumbnail) {
                     StorageHelper::deletePublic($oldThumbnail->uri);
                     $oldThumbnail->delete();
                 }
-
-                $thumbnailURI = StorageHelper::putPublic('/blogs/thumbnails', $thumbnail);
-                $blog->thumbnail()->create([
+    
+                $thumbnailURI = StorageHelper::putPublic('/portfolios/thumbnails', $thumbnail);
+                $portfolio->thumbnail()->create([
                     'uri' => $thumbnailURI,          
                 ]);
             }
-
+    
             return back()
-                // ->withSuccess('Successfully edited the blog');
-                ->withErrors(['error' => 'Successfully edited the blog']);
+                ->with('success', 'Successfully edited portfolio');
         } catch(\Exception $err) {
             return back()
                 ->withErrors(['error' => $err->getMessage()]);
@@ -118,16 +117,16 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $blogId)
+    public function destroy(string $portfolioId)
     {
-        $blog = Blog::findOrFail($blogId);
+        $portfolio = Portfolio::findOrFail($portfolioId);
 
-        if($blog->thumbnail) {
-            StorageHelper::deletePublic($blog->thumbnail);
-            $blog->thumbnail->delete();
+        if($portfolio->thumbnail) {
+            StorageHelper::deletePublic($portfolio->thumbnail);
+            $portfolio->thumbnail->delete();
         }
 
-        $blog->delete();
+        $portfolio->delete();
 
         return back();
     }

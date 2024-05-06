@@ -60,9 +60,9 @@ class ContentController extends Controller
         $content = Content::findOrFail($contentId);
         $data = CollectionHelper::getOrOld($request, $content);
         
-        if($data['text']) $content->update((array) $data->only([
+        if($data) $content->update($data->only([
             'text'
-        ]));
+        ])->toArray());
             
         if($contentImage = $request->file('image')) {
             if($oldImage = $content->image) {

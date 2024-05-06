@@ -8,7 +8,7 @@
         @method('PUT')
         @csrf
 
-        <label class="form-control mb-2 w-full">
+        <label class="form-control mb-4 w-full">
             <div class="flex flex-col px-1 py-2">
                 <b class="label-text">{{ $content?->name }}</b>
                 <small class="text-xs text-gray-400">~ {{ $content?->codename }}</small>
@@ -18,12 +18,10 @@
                 placeholder="Type here . . ."
                 rows="5"
                 name="text"
-            >
-{{ $content?->text }}</textarea
-            >
+            >{{ $content?->text }}</textarea>
         </label>
 
-        <label class="form-control mb-2">
+        <label class="form-control mb-4">
             <div class="flex flex-col px-1 py-2">
                 <b class="label-text">IMAGE</b>
             </div>
