@@ -12,26 +12,22 @@
         <div class="float-sm-right">
             <a
                 href="#"
-                class="badge badge-primary"
-            >
+                class="badge badge-primary">
                 story
             </a>
             <a
                 href="#"
-                class="badge badge-secondary"
-            >
+                class="badge badge-secondary">
                 personal
             </a>
             <a
                 href="#"
-                class="badge badge-success"
-            >
+                class="badge badge-success">
                 social
             </a>
             <a
                 href="#"
-                class="badge-danger badge"
-            >
+                class="badge-danger badge">
                 info
             </a>
         </div>
@@ -41,8 +37,7 @@
     <img
         src="/images/g3.jpg"
         alt=" "
-        class="img-fluid img-thumbnail"
-    />
+        class="img-fluid img-thumbnail" />
 
     <ul class="courses_list my-3">
         <li>
@@ -67,8 +62,7 @@
     <h5 class="card-title">
         <a
             href="/blogs/1"
-            class="text-bl"
-        >
+            class="text-bl">
             Sed ut perspiciatis unde omnis iste.
         </a>
     </h5>

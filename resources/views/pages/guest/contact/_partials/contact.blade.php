@@ -1,7 +1,6 @@
 <section
     class="contact-wthree align-w3"
-    id="contact"
->
+    id="contact">
     <div class="container">
         <div class="wthree_pvt_title text-center">
             <h4 class="w3pvt-title">

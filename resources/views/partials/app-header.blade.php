@@ -8,8 +8,7 @@
                             src="/images/logo.svg"
                             alt=""
                             width="40"
-                            height="40"
-                        />
+                            height="40" />
                         <span class="fs-4 ms-2">Parama Agung Karya</span>
                     </a>
                 </h1>

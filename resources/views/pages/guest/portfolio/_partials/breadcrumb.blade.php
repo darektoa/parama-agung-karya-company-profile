@@ -3,19 +3,16 @@
         <li class="breadcrumb-item py-3">
             <a
                 href="/"
-                class="m-0"
-            >
+                class="m-0">
                 Beranda
             </a>
         </li>
         <li
             class="breadcrumb-item active py-3"
-            aria-current="page"
-        >
+            aria-current="page">
             <a
                 href="#"
-                class="m-0"
-            >
+                class="m-0">
                 Portfolio
             </a>
         </li>

@@ -7,6 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/layouts/dashboard/index.css',
+                'resources/css/layouts/guest/index.css',
                 'resources/css/libraries/tailwind.css',
                 'resources/css/libraries/windmill.output.css',
                 'resources/js/app.js',

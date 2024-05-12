@@ -4,6 +4,7 @@
     @include('partials.app-header')
 
     @include('pages.guest.home._partials.banner')
+    @include('pages.guest.home._partials.about.index')
     @include('pages.guest.home._partials.our-services')
 
     @include('partials.app-footer')

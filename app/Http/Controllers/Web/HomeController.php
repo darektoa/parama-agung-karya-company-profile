@@ -18,8 +18,7 @@ class HomeController extends Controller
     public function index(): View
     {
         $contents = CollectionHelper::toObject(
-            Content::whereRelation('directory.directory', 'codename', 'beranda')
-                ->orderBy('order')
+            Content::orderBy('order')
                 ->get()
                 ->mapWithKeys(fn($items) => (
                     [$items['codename'] => $items]

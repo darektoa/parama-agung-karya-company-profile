@@ -1,4 +1,4 @@
-<section class="wthree-slie-btm py-lg-5">
+<section class="wthree-slie-btm py-lg-5" id="home">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
@@ -45,8 +45,7 @@
                     <div class="d-flex justify-content-start">
                         <a
                             href="/about"
-                            class="w3ls-btn btn"
-                        >
+                            class="w3ls-btn btn">
                             view more
                         </a>
                     </div>

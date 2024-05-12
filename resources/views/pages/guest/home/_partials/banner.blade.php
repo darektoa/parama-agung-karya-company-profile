@@ -1,58 +1,67 @@
 <section
     class="banner"
-    style="background-image: url({{ \StorageHelper::url($contents?->homeHeroBackground?->image?->uri) }})"
->
-    <div class="container">
-        <div class="banner_text_wthree_pvt h-100">
-            <h3 class="home-banner-w3">
-                {{ $contents?->homeHeroTitle?->text }}
-            </h3>
-            <p class="bnr-txt">
-                {{ $contents?->homeHeroDescription?->text }}
-            </p>
+    style="padding: 20% 0">
+    <div
+        id="heroCarousel"
+        class="slide position-absolute w-100 h-100 carousel top-0">
+        <div class="carousel-indicators">
+            <button
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+            <button
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
-    </div>
-
-    <div class="banner-bottom-w3ls">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-6">
-                    <div class="bb-img">
-                        <img
-                            src="{{ \StorageHelper::url($contents?->homeHeroFeaturedCard1?->image?->uri) }}"
-                            class="img-fluid img-thumbnail w-100 object-fit-cover"
-                            alt=""
-                        />
-                        <h3>
-                            {{ $contents?->homeHeroFeaturedCard1?->text }}
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-6">
-                    <div class="bb-img">
-                        <img
-                            src="{{ \StorageHelper::url($contents?->homeHeroFeaturedCard2?->image?->uri) }}"
-                            class="img-fluid img-thumbnail w-100 object-fit-cover"
-                            alt=""
-                        />
-                        <h3>
-                            {{ $contents?->homeHeroFeaturedCard2?->text }}
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-6 mt-sm-0 mx-auto mt-4">
-                    <div class="bb-img">
-                        <img
-                            src="{{ \StorageHelper::url($contents?->homeHeroFeaturedCard3?->image?->uri) }}"
-                            class="img-fluid img-thumbnail w-100 object-fit-cover"
-                            alt=""
-                        />
-                        <h3>
-                            {{ $contents?->homeHeroFeaturedCard3?->text }}
-                        </h3>
-                    </div>
-                </div>
+        <div class="carousel-inner h-100">
+            <div class="active carousel-item h-100">
+                <img
+                    src="https://source.unsplash.com/random/1920x1080?building-1"
+                    class="d-block w-100 h-100 object-fit-cover"
+                    alt="..." />
+            </div>
+            <div class="carousel-item h-100">
+                <img
+                    src="https://source.unsplash.com/random/1920x1080?building-2"
+                    class="d-block w-100 h-100 object-fit-cover"
+                    alt="..." />
+            </div>
+            <div class="carousel-item h-100">
+                <img
+                    src="https://source.unsplash.com/random/1920x1080?building-3"
+                    class="d-block w-100 h-100 object-fit-cover"
+                    alt="..." />
             </div>
         </div>
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev">
+            <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next">
+            <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </section>

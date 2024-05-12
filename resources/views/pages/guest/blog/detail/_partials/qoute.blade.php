@@ -7,8 +7,7 @@
     </p>
     <a
         href="#"
-        class="font-weight-bold blockquote-footer mt-3 text-right"
-    >
+        class="font-weight-bold blockquote-footer mt-3 text-right">
         James Doe
     </a>
 </div>

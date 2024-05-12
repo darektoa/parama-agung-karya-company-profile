@@ -8,8 +8,7 @@
 
     <section
         class="post-wthree align-w3"
-        id="blog"
-    >
+        id="blog">
         <div class="container">
             @include('pages.guest.blog.detail._partials.heading')
 

@@ -9,8 +9,7 @@
                 <div class="d-flex flex-column">
                     <a
                         href="mailto:{{ $contents['contactEmail']['text'] }}"
-                        class="d-block"
-                    >
+                        class="d-block">
                         {{ $contents['contactEmail']['text'] }}
                     </a>
                 </div>

@@ -5,8 +5,7 @@
                 <h2>
                     <a
                         class="navbar-brand"
-                        href="/"
-                    >
+                        href="/">
                         PT Parama Agung Karya
                     </a>
                 </h2>
@@ -33,19 +32,19 @@
                     <hr />
                     <ul class="list-w3pvtits">
                         <li>
-                            <a href="/">Beranda</a>
+                            <a href="#home">Beranda</a>
                         </li>
                         <li class="my-2">
-                            <a href="/about">Tentang Kami</a>
+                            <a href="#about">Tentang Kami</a>
                         </li>
                         <li class="my-2">
-                            <a href="/portfolio">Portfolio</a>
+                            <a href="#projects">Projek</a>
                         </li>
                         <li class="mb-2">
-                            <a href="/blogs">Blog</a>
+                            <a href="#services">Layanan</a>
                         </li>
                         <li>
-                            <a href="/contact">Kontak Kami</a>
+                            <a href="#contact">Kontak Kami</a>
                         </li>
                     </ul>
                 </div>
@@ -61,11 +60,9 @@
 <!-- move top icon -->
 <a
     href="#home"
-    class="move-top text-center"
->
+    class="move-top text-center">
     <span
         class="fa fa-level-up"
-        aria-hidden="true"
-    ></span>
+        aria-hidden="true"></span>
 </a>
 <!-- //move top icon -->

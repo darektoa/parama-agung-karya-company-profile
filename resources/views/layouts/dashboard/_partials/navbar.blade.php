@@ -25,19 +25,16 @@
             <div
                 tabindex="0"
                 role="button"
-                class="avatar btn btn-circle btn-ghost"
-            >
+                class="avatar btn btn-circle btn-ghost">
                 <div class="w-10 rounded-full">
                     <img
                         alt="Tailwind CSS Navbar component"
-                        src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                    />
+                        src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                 </div>
             </div>
             <ul
                 tabindex="0"
-                class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-            >
+                class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
                 <li>
                     <a class="justify-between">
                         Profile

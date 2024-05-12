@@ -2,19 +2,16 @@
     <form
         class="form-inline"
         action="#"
-        method="post"
-    >
+        method="post">
         <input
             class="rounded-0 me-sm-2 form-control"
             type="search"
             placeholder="Search Here"
             aria-label="Search"
-            required
-        />
+            required />
         <input
             class="bg-theme text-wh rounded-0 w-100 btn mt-3"
             type="submit"
-            value="Search"
-        />
+            value="Search" />
     </form>
 </div>

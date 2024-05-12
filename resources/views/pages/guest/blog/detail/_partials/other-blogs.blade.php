@@ -7,16 +7,14 @@
                     <img
                         src="/images/g1.jpg"
                         alt=" "
-                        class="img-fluid img-thumbnail"
-                    />
+                        class="img-fluid img-thumbnail" />
                 </a>
             </div>
             <div class="col-lg-8 col-sm-8 posts-grid-right mt-sm-0 mt-4">
                 <h4>
                     <a
                         href="/blogs/1"
-                        class="text-bl"
-                    >
+                        class="text-bl">
                         Sed ut perspiciatis
                     </a>
                 </h4>
@@ -24,19 +22,16 @@
                     <li class="text-bl me-2">
                         <span
                             class="fa fa-calendar me-2"
-                            aria-hidden="true"
-                        ></span>
+                            aria-hidden="true"></span>
                         15/05/18
                     </li>
                     <li>
                         <span
                             class="fa fa-user"
-                            aria-hidden="true"
-                        ></span>
+                            aria-hidden="true"></span>
                         <a
                             href="/blogs/1"
-                            class="text-bl ms-2"
-                        >
+                            class="text-bl ms-2">
                             Admin
                         </a>
                     </li>
@@ -49,16 +44,14 @@
                     <img
                         src="/images/g2.jpg"
                         alt=" "
-                        class="img-fluid img-thumbnail"
-                    />
+                        class="img-fluid img-thumbnail" />
                 </a>
             </div>
             <div class="col-lg-8 col-sm-8 posts-grid-right mt-sm-0 mt-4">
                 <h4>
                     <a
                         href="/blogs/1"
-                        class="text-bl"
-                    >
+                        class="text-bl">
                         Perspiciatis unde omni
                     </a>
                 </h4>
@@ -66,19 +59,16 @@
                     <li class="text-bl me-2">
                         <span
                             class="fa fa-calendar me-2"
-                            aria-hidden="true"
-                        ></span>
+                            aria-hidden="true"></span>
                         23/05/18
                     </li>
                     <li>
                         <span
                             class="fa fa-user"
-                            aria-hidden="true"
-                        ></span>
+                            aria-hidden="true"></span>
                         <a
                             href="/blogs/1"
-                            class="text-bl ms-2"
-                        >
+                            class="text-bl ms-2">
                             Admin
                         </a>
                     </li>
@@ -91,16 +81,14 @@
                     <img
                         src="/images/g3.jpg"
                         alt=" "
-                        class="img-fluid img-thumbnail"
-                    />
+                        class="img-fluid img-thumbnail" />
                 </a>
             </div>
             <div class="col-lg-8 col-sm-8 posts-grid-right mt-sm-0 mt-4">
                 <h4>
                     <a
                         href="/blogs/1"
-                        class="text-bl"
-                    >
+                        class="text-bl">
                         Sed ut perspiciatis
                     </a>
                 </h4>
@@ -108,19 +96,16 @@
                     <li class="text-bl me-2">
                         <span
                             class="fa fa-calendar me-2"
-                            aria-hidden="true"
-                        ></span>
+                            aria-hidden="true"></span>
                         13/06/18
                     </li>
                     <li>
                         <span
                             class="fa fa-user"
-                            aria-hidden="true"
-                        ></span>
+                            aria-hidden="true"></span>
                         <a
                             href="/blogs/1"
-                            class="text-bl ms-2"
-                        >
+                            class="text-bl ms-2">
                             Admin
                         </a>
                     </li>

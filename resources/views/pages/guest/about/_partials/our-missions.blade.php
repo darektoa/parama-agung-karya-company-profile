@@ -1,7 +1,6 @@
 <section
     class="bg-services position-relative align-w3"
-    id="services"
->
+    id="services">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">

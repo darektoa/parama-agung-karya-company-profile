@@ -1,7 +1,6 @@
 <section
     class="bg-services position-relative align-w3"
-    id="services"
->
+    id="services">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
@@ -32,8 +31,7 @@
                     <div class="d-flex justify-content-start">
                         <a
                             href="/about"
-                            class="w3ls-btn btn"
-                        >
+                            class="w3ls-btn btn">
                             Lebih Lanjut
                         </a>
                     </div>

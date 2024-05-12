@@ -2,92 +2,77 @@
     <nav>
         <label
             for="drop"
-            class="toggle"
-        >
+            class="toggle">
             <span
                 class="fa-solid fa-bars"
-                aria-hidden="true"
-            ></span>
+                aria-hidden="true"></span>
         </label>
         <input
             type="checkbox"
-            id="drop"
-        />
+            id="drop" />
         <ul class="menu">
             <li>
-                <a
-                    href="/"
-                    class="{{ Request::is('/') ? 'active' : '' }}"
-                >
-                    Beranda
-                </a>
+                <a href="#home">Beranda</a>
             </li>
             <li>
-                <a
-                    href="/about"
-                    class="{{ Request::is('about') ? 'active' : '' }}"
-                >
-                    Tentang Kami
-                </a>
+                <a href="#about">Tentang Kami</a>
             </li>
             <li>
-                <a
-                    href="/portfolio"
-                    class="{{ Request::is('portfolio') ? 'active' : '' }}"
-                >
-                    Portfolio
-                </a>
+                <a href="#projects">project</a>
             </li>
             <li>
-                <a
-                    href="/contact"
-                    class="{{ Request::is('contact') ? 'active' : '' }}"
-                >
-                    Kontak Kami
-                </a>
+                <a href="#services">Layanan</a>
             </li>
             <li>
-                <label
-                    for="drop-2"
-                    class="toogle-2 toggle"
-                >
-                    Lainnya
-                    <span
-                        class="fa-solid fa-angle-down"
-                        aria-hidden="true"
-                    ></span>
-                </label>
-                <a
-                    href="#"
-                    class=""
-                >
-                    Lainnya
-                    <span
-                        class="fa-solid fa-angle-down"
-                        aria-hidden="true"
-                    ></span>
-                </a>
-                <input
-                    type="checkbox"
-                    id="drop-2"
-                />
-                <ul>
-                    {{-- <li><a href="/portfolio" class="drop-text">Portfolio</a></li> --}}
-                    <li>
-                        <a
-                            href="/blogs"
-                            class="drop-text {{ Request::is('blogs') ? 'active' : '' }}"
-                        >
-                            Blog
-                        </a>
-                    </li>
-                </ul>
+                <a href="#contact">Kontak</a>
             </li>
 
-            <!-- <li class="nav-right-sty mt-lg-0 mt-sm-4 mt-3">
+            {{--
+                <li>
+                <label
+                for="drop-2"
+                class="toogle-2 toggle"
+                >
+                Lainnya
+                <span
+                class="fa-solid fa-angle-down"
+                aria-hidden="true"
+                ></span>
+                </label>
+                <a
+                href="#"
+                class=""
+                >
+                Lainnya
+                <span
+                class="fa-solid fa-angle-down"
+                aria-hidden="true"
+                ></span>
+                </a>
+                <input
+                type="checkbox"
+                id="drop-2"
+                />
+                <ul>
+                <li><a href="#portfolio" class="drop-text">Portfolio</a></li>
+                <li>
+                <a
+                href="#blogs"
+                class="drop-text"
+                >
+                Blog
+                </a>
+                </li>
+                </ul>
+                </li>
+            --}}
+
+            {{--
+                <li class="nav-right-sty mt-lg-0 mt-sm-4 mt-3">
                 <a href="/login" class="reqe-button text-uppercase">Login</a>
                 <a href="/register" class="reqe-button text-uppercase">Register</a>
-            </li> -->
+                </li>
+            --}}
         </ul>
     </nav>
 </div>

@@ -11,9 +11,7 @@
         </header>
 
         <section>
-            <div
-                class="mb-8 h-auto max-w-lg overflow-auto rounded-lg bg-white px-4 py-3 shadow-md dark:bg-gray-800"
-            >
+            <div class="mb-8 h-auto max-w-lg overflow-auto rounded-lg bg-white px-4 py-3 shadow-md dark:bg-gray-800">
                 @include('pages.dashboard.blogs.edit._partials.updateForm')
             </div>
         </section>

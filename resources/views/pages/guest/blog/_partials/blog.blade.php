@@ -1,7 +1,6 @@
 <section
     class="portfolio-wthree align-w3"
-    id="blog"
->
+    id="blog">
     <div class="container">
         <div class="wthree_pvt_title text-center">
             <h4 class="w3pvt-title">Blog</h4>
@@ -16,8 +15,7 @@
                                 <img
                                     src="images/g1.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </div>
                             <div class="port-desc text-center">
                                 <h6 class="main-title-w3pvt text-center">Some Description</h6>
@@ -36,8 +34,7 @@
                                 <img
                                     src="images/g2.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -56,8 +53,7 @@
                                 <img
                                     src="images/g3.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -76,8 +72,7 @@
                                 <img
                                     src="images/g4.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -96,8 +91,7 @@
                                 <img
                                     src="images/g5.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -116,8 +110,7 @@
                                 <img
                                     src="images/g6.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -136,8 +129,7 @@
                                 <img
                                     src="images/g3.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -156,8 +148,7 @@
                                 <img
                                     src="images/g1.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -176,8 +167,7 @@
                                 <img
                                     src="images/g2.jpg"
                                     alt=" "
-                                    class="img-fluid"
-                                />
+                                    class="img-fluid" />
                             </a>
                         </div>
                         <div class="port-desc text-center">
@@ -194,21 +184,18 @@
         <!-- popup-->
         <div
             id="gal1"
-            class="popup-effect animate"
-        >
+            class="popup-effect animate">
             <div class="popup">
                 <img
                     src="images/g1.jpg"
                     alt="Popup Image"
-                    class="img-fluid"
-                />
+                    class="img-fluid" />
                 <p class="editContent mt-4">
                     Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
                 </p>
                 <a
                     class="close"
-                    href="/blogs/lery"
-                >
+                    href="/blogs/lery">
                     &times;
                 </a>
             </div>
@@ -217,21 +204,18 @@
         <!-- popup-->
         <div
             id="gal2"
-            class="popup-effect animate"
-        >
+            class="popup-effect animate">
             <div class="popup">
                 <img
                     src="images/g2.jpg"
                     alt="Popup Image"
-                    class="img-fluid"
-                />
+                    class="img-fluid" />
                 <p class="editContent mt-4">
                     Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
                 </p>
                 <a
                     class="close"
-                    href="/blogs/lery"
-                >
+                    href="/blogs/lery">
                     &times;
                 </a>
             </div>
@@ -240,21 +224,18 @@
         <!-- popup-->
         <div
             id="gal3"
-            class="popup-effect animate"
-        >
+            class="popup-effect animate">
             <div class="popup">
                 <img
                     src="images/g3.jpg"
                     alt="Popup Image"
-                    class="img-fluid"
-                />
+                    class="img-fluid" />
                 <p class="editContent mt-4">
                     Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
                 </p>
                 <a
                     class="close"
-                    href="/blogs/lery"
-                >
+                    href="/blogs/lery">
                     &times;
                 </a>
             </div>
@@ -263,21 +244,18 @@
         <!-- popup-->
         <div
             id="gal4"
-            class="popup-effect animate"
-        >
+            class="popup-effect animate">
             <div class="popup">
                 <img
                     src="images/g4.jpg"
                     alt="Popup Image"
-                    class="img-fluid"
-                />
+                    class="img-fluid" />
                 <p class="editContent mt-4">
                     Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
                 </p>
                 <a
                     class="close"
-                    href="/blogs/lery"
-                >
+                    href="/blogs/lery">
                     &times;
                 </a>
             </div>
@@ -286,21 +264,18 @@
         <!-- popup-->
         <div
             id="gal5"
-            class="popup-effect animate"
-        >
+            class="popup-effect animate">
             <div class="popup">
                 <img
                     src="images/g5.jpg"
                     alt="Popup Image"
-                    class="img-fluid"
-                />
+                    class="img-fluid" />
                 <p class="editContent mt-4">
                     Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
                 </p>
                 <a
                     class="close"
-                    href="/blogs/lery"
-                >
+                    href="/blogs/lery">
                     &times;
                 </a>
             </div>
@@ -309,21 +284,18 @@
         <!-- popup-->
         <div
             id="gal6"
-            class="popup-effect animate"
-        >
+            class="popup-effect animate">
             <div class="popup">
                 <img
                     src="images/g6.jpg"
                     alt="Popup Image"
-                    class="img-fluid"
-                />
+                    class="img-fluid" />
                 <p class="editContent mt-4">
                     Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
                 </p>
                 <a
                     class="close"
-                    href="/blogs/lery"
-                >
+                    href="/blogs/lery">
                     &times;
                 </a>
             </div>

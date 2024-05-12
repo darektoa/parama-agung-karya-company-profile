@@ -5,8 +5,7 @@
             <img
                 class="mr-3"
                 src="/images/m.png"
-                alt="Generic placeholder image"
-            />
+                alt="Generic placeholder image" />
             <div class="media-body comments-grid-right">
                 <h4>Parker Moe</h4>
                 <ul class="my-2">
@@ -17,8 +16,7 @@
                     <li>
                         <a
                             href="#"
-                            class="font-weight-bold"
-                        >
+                            class="font-weight-bold">
                             Reply
                         </a>
                     </li>
@@ -32,12 +30,10 @@
         <div class="media mt-sm-5 mt-3">
             <a
                 class="pr-3"
-                href="#"
-            >
+                href="#">
                 <img
                     src="/images/f.png"
-                    alt="Generic placeholder image"
-                />
+                    alt="Generic placeholder image" />
             </a>
             <div class="media-body comments-grid-right">
                 <h4>Parker Moe</h4>
@@ -49,8 +45,7 @@
                     <li>
                         <a
                             href="#"
-                            class="font-weight-bold"
-                        >
+                            class="font-weight-bold">
                             Reply
                         </a>
                     </li>
@@ -64,12 +59,10 @@
         <div class="media mt-sm-5 mt-3">
             <a
                 class="pr-3"
-                href="#"
-            >
+                href="#">
                 <img
                     src="/images/f.png"
-                    alt="Generic placeholder image"
-                />
+                    alt="Generic placeholder image" />
             </a>
             <div class="media-body comments-grid-right">
                 <h4>Parker Moe</h4>
@@ -81,8 +74,7 @@
                     <li>
                         <a
                             href="#"
-                            class="font-weight-bold"
-                        >
+                            class="font-weight-bold">
                             Reply
                         </a>
                     </li>

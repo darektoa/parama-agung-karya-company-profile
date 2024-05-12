@@ -1,7 +1,6 @@
 <section
     class="blog_w3ls align-w3"
-    id="posts"
->
+    id="posts">
     <div class="container">
         <div class="wthree_pvt_title tex t-center">
             <h4 class="w3pvt-title">latest posts</h4>
@@ -19,8 +18,7 @@
                             <img
                                 class="card-img-bottom"
                                 src="images/g1.jpg"
-                                alt="Card image cap"
-                            />
+                                alt="Card image cap" />
                             <span class="post-icon">blog post</span>
                         </a>
                     </div>
@@ -34,8 +32,7 @@
                         </p>
                         <a
                             href="/single"
-                            class="blog_link"
-                        >
+                            class="blog_link">
                             Read more
                         </a>
                     </div>
@@ -50,8 +47,7 @@
                             <img
                                 class="card-img-bottom"
                                 src="images/g2.jpg"
-                                alt="Card image cap"
-                            />
+                                alt="Card image cap" />
                             <span class="post-icon">blog post</span>
                         </a>
                     </div>
@@ -65,8 +61,7 @@
                         </p>
                         <a
                             href="/single"
-                            class="blog_link"
-                        >
+                            class="blog_link">
                             Read more
                         </a>
                     </div>
@@ -81,8 +76,7 @@
                             <img
                                 class="card-img-bottom"
                                 src="images/g3.jpg"
-                                alt="Card image cap"
-                            />
+                                alt="Card image cap" />
                             <span class="post-icon">blog post</span>
                         </a>
                     </div>
@@ -96,8 +90,7 @@
                         </p>
                         <a
                             href="/single"
-                            class="blog_link"
-                        >
+                            class="blog_link">
                             Read more
                         </a>
                     </div>

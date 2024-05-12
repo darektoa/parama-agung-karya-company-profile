@@ -3,8 +3,7 @@
         class="flex h-full w-full flex-col items-start"
         action="{{ route('dashboard.content.byContentId.put', [$content?->id ?? '']) }}"
         method="POST"
-        enctype="multipart/form-data"
-    >
+        enctype="multipart/form-data">
         @method('PUT')
         @csrf
 
@@ -17,8 +16,9 @@
                 class="textarea textarea-bordered w-full resize-none"
                 placeholder="Type here . . ."
                 rows="5"
-                name="text"
-            >{{ $content?->text }}</textarea>
+                name="text">
+{{ $content?->text }}</textarea
+            >
         </label>
 
         <label class="form-control mb-4">
@@ -30,20 +30,16 @@
                     <img
                         src="{{ $content?->image?->uri ? StorageHelper::url($content?->image?->uri ?? '') : '/images/illustrations/snap_the_moment_bg.svg' }}"
                         class="aspect-video w-80"
-                        alt=""
-                    />
+                        alt="" />
                 </figure>
                 <div
-                    class="group/contentEditorImageInputCardForeground absolute left-0 top-0 flex h-full w-full bg-base-300/60 opacity-0 transition-all group-hover/contentEditorImageInputCard:opacity-100"
-                >
+                    class="group/contentEditorImageInputCardForeground absolute left-0 top-0 flex h-full w-full bg-base-300/60 opacity-0 transition-all group-hover/contentEditorImageInputCard:opacity-100">
                     <div
-                        class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100"
-                    >
+                        class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
                         <input
                             type="file"
                             name="image"
-                            class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full"
-                        />
+                            class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />
                     </div>
                 </div>
             </div>
@@ -51,8 +47,7 @@
 
         <button
             class="btn btn-outline btn-block sticky bottom-4 mt-auto"
-            type="submit"
-        >
+            type="submit">
             SAVE
         </button>
     </form>
