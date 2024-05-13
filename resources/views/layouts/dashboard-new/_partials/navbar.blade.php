@@ -1,4 +1,4 @@
-<header class="z-10 bg-white py-4 shadow-md dark:bg-gray-800">
+<header class="z-10 bg-base-100 py-4 shadow-md dark:bg-base-200">
     <div class="container mx-auto flex h-full items-center justify-between px-6 text-purple-600 dark:text-purple-300">
         <!-- Mobile hamburger -->
         @include('layouts.dashboard-new._partials.mobileHumberger')

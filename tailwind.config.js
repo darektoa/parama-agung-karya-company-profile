@@ -4,6 +4,7 @@ module.exports = {
         'resources/js/**/*.{js,jsx,ts,tsx}',
         'resources/views/**/*.blade.php',
     ],
+    darkMode: ['selector', '[data-theme="dark"]'],
     theme: {
         extend: {
             borderRadius: {

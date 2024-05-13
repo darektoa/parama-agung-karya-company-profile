@@ -2,79 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-.dashboardSidebar {
-    @apply z-20
-        hidden
-        w-64
-        flex-shrink-0
-        overflow-y-auto
-        bg-white
-        md:block
-        dark:bg-gray-800;
-}
+@layer utilities {
+    .dashboardSidebar {
+        @apply z-20
+            hidden
+            w-72
+            flex-shrink-0
+            overflow-y-auto
+            bg-base-100
+            md:block;
+    }
+    
+    .dashboardSidebar__container {
+        @apply py-4
+            flex
+            flex-col
+            text-base-content
+    }
+    
+    .dashboardSidebar__container__brandText {
+        @apply ml-6
+            mb-6
+            flex
+            text-lg
+            font-bold
+            text-base-content;
+    }
+    
+    .sidemenu {
+    
+    }
+    
+    .sidemenu li {
+        @apply relative;
+    }
+    
+    .sidemenu li > *:not(ul, .menu-title, details, .btn),
+    .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+        @apply px-6
+            py-3
+            inline-flex
+            w-full
+            items-center
+            text-sm
+            font-semibold
+            transition-colors
+            rounded-l-none
+            duration-150;
+    }
 
-.dashboardSidebar__container {
-    @apply py-4
-        text-gray-500
-        dark:text-gray-400;
-}
-
-.dashboardSidebar__container__brandText {
-    @apply ml-6
-        mb-6
-        flex
-        text-lg
-        font-bold
-        text-gray-800
-        dark:text-gray-200;
-}
-
-.dashboardSidebar__container_navList {
-
-}
-
-.dashboardSidebar__container_navList__item {
-    @apply relative
-        px-6
-        py-3;
-}
-
-.dashboardSidebar__container_navList__item__link {
-    @apply inline-flex
-        w-full
-        items-center
-        text-sm
-        font-semibold
-        transition-colors
-        duration-150
-        hover:text-gray-800
-        dark:hover:text-gray-200;
-}
-
-.dashboardSidebar__container_navList__item__link\:active {
-    @apply inline-flex
-        w-full
-        items-center
-        text-sm
-        font-semibold
-        text-gray-800
-        transition-colors
-        duration-150
-        hover:text-gray-800
-        dark:text-gray-100
-        dark:hover:text-gray-200;
-}
-
-.dashboardSidebar__container_navList__item__indicator {
-    @apply hidden;
-}
-
-.dashboardSidebar__container_navList__item__indicator\:active {
-    @apply absolute
-        inset-y-0
-        left-0
-        w-1
-        rounded-br-lg
-        rounded-tr-lg
-        bg-purple-600;
+    .sidemenu li > *:not(ul, .menu-title, details, .btn, .active),
+    .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title, .active)),
+    .sidemenu li > details > summary {
+        @apply active:bg-transparent
+            hover:text-black
+            hover:bg-transparent
+            dark:hover:text-white;
+    }
+    
+    .sidemenu li > *:not(ul, .menu-title, details, .btn).active,
+    .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title)).active {
+        @apply relative
+            text-white;
+    }
+    
+    .sidemenu li > .indicator {
+        @apply hidden;
+    }
+    
+    .sidemenu li > *:not(ul, .menu-title, details, .btn).active::before,
+    .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title)).active::before {
+        @apply content-['']
+            absolute
+            inset-y-0
+            left-0
+            w-1
+            rounded-br-lg
+            rounded-tr-lg
+            bg-purple-600;
+    }
 }

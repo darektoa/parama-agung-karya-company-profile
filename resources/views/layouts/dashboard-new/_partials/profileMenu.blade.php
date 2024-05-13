@@ -1,6 +1,6 @@
 <li class="relative">
     <button
-        class="focus:shadow-outline-purple rounded-full align-middle focus:outline-none"
+        class="focus:ring rounded-full align-middle focus:outline-none"
         @click="toggleProfileMenu"
         @keydown.escape="closeProfileMenu"
         aria-label="Account"
@@ -32,7 +32,8 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         viewBox="0 0 24 24"
-                        stroke="currentColor">
+                        stroke="currentColor"
+                    >
                         <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                     </svg>
                     <span>Profile</span>
@@ -80,3 +81,4 @@
         </ul>
     </template>
 </li>
+

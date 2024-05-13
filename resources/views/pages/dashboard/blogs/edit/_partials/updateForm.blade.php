@@ -2,7 +2,8 @@
     class="flex h-full w-full flex-col items-start"
     action="{{ route('dashboard.blog.byBlogId.put', request()->blogId) }}"
     method="POST"
-    enctype="multipart/form-data">
+    enctype="multipart/form-data"
+>
     @method('PUT')
     @csrf
 
@@ -13,18 +14,24 @@
         <div class="group/contentEditorImageInputCard relative w-full max-w-80 overflow-hidden rounded-lg">
             <figure class="w-full bg-base-300 object-contain">
                 <img
+                    id="thumbnail"
                     src="{{ $blog->thumbnail?->uri ? \StorageHelper::url($blog->thumbnail?->uri) : '/images/illustrations/snap_the_moment_bg.svg' }}"
                     class="aspect-video w-80"
-                    alt="" />
+                    alt=""
+                />
             </figure>
             <div
-                class="group/contentEditorImageInputCardForeground absolute left-0 top-0 flex h-full w-full bg-base-300/60 opacity-0 transition-all group-hover/contentEditorImageInputCard:opacity-100">
+                class="group/contentEditorImageInputCardForeground absolute left-0 top-0 flex h-full w-full bg-base-300/60 opacity-0 transition-all group-hover/contentEditorImageInputCard:opacity-100"
+            >
                 <div
-                    class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
+                    class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100"
+                >
                     <input
+                        id="inputThumbnail"
                         type="file"
                         name="thumbnail"
-                        class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />
+                        class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full"
+                    />
                 </div>
             </div>
         </div>
@@ -40,7 +47,8 @@
             name="title"
             placeholder="Type here . . ."
             class="peer input input-bordered w-full"
-            value="{{ $blog->title }}" />
+            value="{{ $blog->title }}"
+        />
         <span class="px-1 py-2 text-xs text-red-600 opacity-0 duration-300 peer-invalid:opacity-100 dark:text-red-400">
             Title field must be fill.
         </span>
@@ -56,7 +64,8 @@
             class="peer textarea textarea-bordered w-full resize-none"
             placeholder="Type here . . ."
             rows="5"
-            name="content">
+            name="content"
+        >
 {{ $blog->content }}</textarea
         >
         <span class="px-1 py-2 text-xs text-red-600 opacity-0 duration-300 peer-invalid:opacity-100 dark:text-red-400">
@@ -66,7 +75,76 @@
 
     <button
         class="btn btn-primary btn-block sticky bottom-2 mt-auto"
-        type="submit">
+        type="submit"
+    >
         SAVE
     </button>
 </form>
+
+<script>
+    function isBloabable(file) {
+        const { type } = file;
+
+        return (
+            type.startsWith('image/')
+            || type.startsWith('video/')
+            || type.startsWith('audio/')
+        )
+    }
+
+    function toBlob(file) {
+        const fileReader = new FileReader();
+        fileReader.readAsArrayBuffer(file)
+
+        const promise = new Promise((resolve, reject) => {
+            fileReader.addEventListener('load', (event) => {
+                const arrayBuffer = event.target.result;
+                const blob = new Blob([arrayBuffer]);
+                resolve(blob);
+            })
+
+            fileReader.addEventListener('error', (event) => {
+                reject(null);
+            })
+        });
+
+        return promise;
+    }
+
+    function toDataURL(file) {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+
+        const promise = new Promise((resolve, reject) => {
+            fileReader.addEventListener('load', (event) => {
+                const dataURL = event.target.result;
+                resolve(dataURL);
+            })
+
+            fileReader.addEventListener('error', (event) => {
+                reject(null);
+            })
+        })
+
+        return promise
+    }
+
+    const elmnt = document.getElementById('inputThumbnail').addEventListener('change', async (evt) => {
+        const baseURL = "{{ route('dashboard.blog.byBlogId.put', request()->blogId) }}";
+        const file = evt.target.files[0];
+        const formData = new FormData();
+
+        const thumbnailDataURL = await toDataURL(file);
+        const thumbnailBlob = await toBlob(file);
+        document.getElementById('thumbnail').src = thumbnailDataURL;
+
+        formData.append('_method', 'PUT');
+        formData.append('_token', '{{ csrf_token() }}');
+        formData.append('thumbnail', thumbnailBlob);
+
+        fetch(baseURL, {
+            method: 'POST',
+            body: formData,
+        });
+    })
+</script>

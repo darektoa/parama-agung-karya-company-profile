@@ -1,5 +1,5 @@
 <button
-    class="focus:shadow-outline-purple -ml-1 mr-5 rounded-md p-1 focus:outline-none md:hidden"
+    class="focus:ring -ml-1 mr-5 rounded-md p-1 focus:outline-none md:hidden"
     @click="toggleSideMenu"
     aria-label="Menu">
     <svg

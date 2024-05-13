@@ -8,14 +8,16 @@
             <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Blogs</h2>
             <a
                 href="{{ route('dashboard.blog.create') }}"
-                class="btn btn-outline btn-primary btn-sm ml-4">
+                class="btn btn-outline btn-primary btn-sm ml-4"
+            >
                 Add
             </a>
         </header>
 
         <section
             class="grid grid-flow-row grid-cols-3 gap-6"
-            x-data="{ deleteId: null, deleteTitle: null }">
+            x-data="{ deleteId: null, deleteTitle: null }"
+        >
             @foreach ($blogs as $blog)
                 <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="bg-slate-400">
@@ -23,7 +25,8 @@
                             class="h-[100%] w-full object-cover"
                             src="{{ $blog->thumbnail?->uri ? \StorageHelper::url($blog->thumbnail?->uri) : '/images/illustrations/snap_the_moment_bg.svg' }}"
                             loading="lazy"
-                            alt=" " />
+                            alt=" "
+                        />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">{{ $blog->title }}</h2>
@@ -31,7 +34,8 @@
                         <div class="card-actions justify-end">
                             <a
                                 href="{{ route('dashboard.blog.byBlogId.edit', $blog->id) }}"
-                                class="btn btn-warning btn-sm">
+                                class="btn btn-warning btn-sm"
+                            >
                                 Edit
                             </a>
                             <button
@@ -40,7 +44,8 @@
                                     deleteTitle = '{{ $blog->title }}'
                                 "
                                 onclick="deleteBlogModal.showModal()"
-                                class="btn btn-error btn-sm">
+                                class="btn btn-error btn-sm"
+                            >
                                 Delete
                             </button>
                         </div>
@@ -50,11 +55,13 @@
 
             <dialog
                 id="deleteBlogModal"
-                class="modal">
+                class="modal"
+            >
                 <div class="modal-box">
                     <h3
                         class="text-lg font-bold"
-                        x-text="deleteTitle"></h3>
+                        x-text="deleteTitle"
+                    ></h3>
                     <p class="py-4">Are you sure to delete it?</p>
                     <div class="modal-action">
                         <form method="dialog">
@@ -62,12 +69,14 @@
                         </form>
                         <form
                             method="POST"
-                            :action="'{{ route('dashboard.blog.byBlogId.delete', '') }}/' + deleteId">
+                            :action="'{{ route('dashboard.blog.byBlogId.delete', '') }}/' + deleteId"
+                        >
                             @method('DELETE')
                             @csrf
                             <button
                                 class="btn btn-outline btn-error"
-                                type="submit">
+                                type="submit"
+                            >
                                 Delete
                             </button>
                         </form>

@@ -1,4 +1,4 @@
-@extends('layouts.dashboard.index')
+@extends('layouts.dashboard-new.index')
 
 @section('content')
     <main class="px-container p-6">

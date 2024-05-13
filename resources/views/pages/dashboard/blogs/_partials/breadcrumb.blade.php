@@ -1,16 +1,18 @@
-<div class="breadcrumbs sticky top-0 z-40 border-b border-b-neutral px-6 text-sm backdrop-blur-xl">
+<div class="breadcrumbs sticky top-0 z-40 border-b border-b-gray-100 px-6 text-sm backdrop-blur-xl">
     <ul>
         <li>
             <a
                 href="{{ route('dashboard.home') }}"
-                class="text-neutral-content">
+                class="text-base-content"
+            >
                 Home
             </a>
         </li>
         <li>
             <a
                 href="{{ route('dashboard.blog') }}"
-                class="text-neutral-content">
+                class="text-base-content"
+            >
                 Blogs
             </a>
         </li>

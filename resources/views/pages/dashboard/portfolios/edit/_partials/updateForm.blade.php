@@ -2,7 +2,8 @@
     class="flex h-full w-full flex-col items-start"
     action="{{ route('dashboard.portfolio.byPortfolioId.put', request()->portfolioId) }}"
     method="POST"
-    enctype="multipart/form-data">
+    enctype="multipart/form-data"
+>
     @method('PUT')
     @csrf
 
@@ -15,16 +16,20 @@
                 <img
                     src="{{ $portfolio->thumbnail?->uri ? \StorageHelper::url($portfolio->thumbnail?->uri) : '/images/illustrations/snap_the_moment_bg.svg' }}"
                     class="aspect-video w-80"
-                    alt="" />
+                    alt=""
+                />
             </figure>
             <div
-                class="group/contentEditorImageInputCardForeground absolute left-0 top-0 flex h-full w-full bg-base-300/60 opacity-0 transition-all group-hover/contentEditorImageInputCard:opacity-100">
+                class="group/contentEditorImageInputCardForeground absolute left-0 top-0 flex h-full w-full bg-base-300/60 opacity-0 transition-all group-hover/contentEditorImageInputCard:opacity-100"
+            >
                 <div
-                    class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
+                    class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100"
+                >
                     <input
                         type="file"
                         name="thumbnail"
-                        class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />
+                        class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full"
+                    />
                 </div>
             </div>
         </div>
@@ -40,7 +45,8 @@
             name="title"
             placeholder="Type here . . ."
             class="peer input input-bordered w-full"
-            value="{{ $portfolio->title }}" />
+            value="{{ $portfolio->title }}"
+        />
         <span class="px-1 py-2 text-xs text-red-600 opacity-0 duration-300 peer-invalid:opacity-100 dark:text-red-400">
             Title field must be fill.
         </span>
@@ -56,7 +62,8 @@
             class="peer textarea textarea-bordered w-full resize-none"
             placeholder="Type here . . ."
             rows="5"
-            name="content">
+            name="content"
+        >
 {{ $portfolio->content }}</textarea
         >
         <span class="px-1 py-2 text-xs text-red-600 opacity-0 duration-300 peer-invalid:opacity-100 dark:text-red-400">
@@ -66,7 +73,8 @@
 
     <button
         class="btn btn-primary btn-block sticky bottom-2 mt-auto"
-        type="submit">
+        type="submit"
+    >
         SAVE
     </button>
 </form>
