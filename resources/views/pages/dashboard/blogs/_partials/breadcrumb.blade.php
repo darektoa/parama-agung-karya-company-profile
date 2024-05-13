@@ -3,16 +3,14 @@
         <li>
             <a
                 href="{{ route('dashboard.home') }}"
-                class="text-base-content"
-            >
+                class="text-base-content">
                 Home
             </a>
         </li>
         <li>
             <a
                 href="{{ route('dashboard.blog') }}"
-                class="text-base-content"
-            >
+                class="text-base-content">
                 Blogs
             </a>
         </li>

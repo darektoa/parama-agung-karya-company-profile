@@ -12,19 +12,19 @@
             id="drop" />
         <ul class="menu">
             <li>
-                <a href="#home">Beranda</a>
+                <a href="/#home">Beranda</a>
             </li>
             <li>
-                <a href="#about">Tentang Kami</a>
+                <a href="/#about">Tentang Kami</a>
             </li>
             <li>
-                <a href="#projects">project</a>
+                <a href="/#projects">project</a>
             </li>
             <li>
-                <a href="#services">Layanan</a>
+                <a href="/#services">Layanan</a>
             </li>
             <li>
-                <a href="#contact">Kontak</a>
+                <a href="/#contact">Kontak</a>
             </li>
 
             {{--

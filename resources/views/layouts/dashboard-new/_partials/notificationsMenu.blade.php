@@ -1,6 +1,6 @@
 <li class="relative">
     <button
-        class="focus:ring relative rounded-md align-middle focus:outline-none"
+        class="relative rounded-md align-middle focus:outline-none focus:ring"
         @click="toggleNotificationsMenu"
         @keydown.escape="closeNotificationsMenu"
         aria-label="Notifications"

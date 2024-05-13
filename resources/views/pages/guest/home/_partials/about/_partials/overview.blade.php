@@ -1,4 +1,4 @@
-<section class="single_grid_w3_main align-w3">
+<section class="my-5 py-5">
     <div class="container">
         <div class="row pt-lg-4">
             <div class="col-lg-5">
@@ -12,7 +12,9 @@
                 </div>
             </div>
             <div class="col-lg-7 mt-lg-0 mt-4">
-                <div class="slide-img rounded-2"></div>
+                <div
+                    class="slide-img rounded-4"
+                    style="background-image: url('/images/stocks/wave-design-building.jpg')"></div>
             </div>
         </div>
     </div>

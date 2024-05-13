@@ -2,8 +2,7 @@
     <div class="dashboardSidebar__container">
         <a
             class="dashboardSidebar__container__brandText"
-            href="#"
-        >
+            href="#">
             Parama Agung Karya
         </a>
 

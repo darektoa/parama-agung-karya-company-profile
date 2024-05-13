@@ -1,5 +1,5 @@
 <div class="flex flex-1 justify-center lg:mr-32">
-    <div class="relative mr-6 w-full max-w-xl focus-within:text-primary">
+    <div class="focus-within:text-primary relative mr-6 w-full max-w-xl">
         <div class="absolute inset-y-0 flex items-center pl-2">
             <svg
                 class="h-4 w-4"
@@ -13,7 +13,7 @@
             </svg>
         </div>
         <input
-            class="dark:focus:ring focus:ring form-input w-full rounded-md border-0 bg-base-100 pl-8 py-2 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:bg-white focus:placeholder-gray-500 focus:outline-none dark:bg-base-100 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600"
+            class="form-input w-full rounded-md border-0 bg-base-100 py-2 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring dark:bg-base-100 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring"
             type="text"
             placeholder="Search for projects"
             aria-label="Search" />

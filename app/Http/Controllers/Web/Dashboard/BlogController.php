@@ -107,8 +107,7 @@ class BlogController extends Controller
             }
 
             return back()
-                // ->withSuccess('Successfully edited the blog');
-                ->withErrors(['error' => 'Successfully edited the blog']);
+                ->withSuccess('Successfully edited the blog');
         } catch(\Exception $err) {
             return back()
                 ->withErrors(['error' => $err->getMessage()]);

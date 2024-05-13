@@ -9,7 +9,6 @@ export default defineConfig({
                 'resources/css/layouts/dashboard/index.css',
                 'resources/css/layouts/guest/index.css',
                 'resources/css/libraries/tailwind.css',
-                'resources/css/libraries/windmill.output.css',
                 'resources/js/app.js',
                 'resources/js/app-windmill.js',
             ],

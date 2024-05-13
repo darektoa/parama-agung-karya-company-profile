@@ -40,6 +40,29 @@
         @yield('head')
     </head>
     <body>
+        <div id="googleTranslateSelect"></div>
         @yield('content')
+
+
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'googleTranslateSelect');
+            }
+
+            const observer = new MutationObserver(() => {
+                console.log(object);
+
+                const a = document.querySelector('#\:1\.container');
+                console.log(a)
+            })
+            
+            setInterval(() => {
+                const clickEvnt = new Event('click');
+                const a = document.getElementById(":1.close");
+                a.dispatchEvent(clickEvnt);
+                console.log(a)
+            }, 1000);
+        </script>
     </body>
 </html>

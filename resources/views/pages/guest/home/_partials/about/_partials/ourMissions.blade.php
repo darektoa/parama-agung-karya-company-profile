@@ -1,12 +1,13 @@
-<section class="position-relative align-w3">
-    <div 
-        class="w-100 h-100 z-n1 position-absolute top-0 left-0" 
-        style="background: url('/images/stocks/vision-illustration.jpeg') no-repeat right top; filter: grayscale(0.5)">
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            
-        </div>
+<section
+    class="align-w3 position-relative d-flex justify-content-center"
+    style="background-color: #dde3ef">
+    <div
+        class="h-100 position-absolute container top-0 z-0"
+        style="
+            background: url('/images/stocks/vision-illustration.jpeg') no-repeat right top;
+            filter: grayscale(0.5);
+        "></div>
+    <div class="position-relative container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="services-bg-color">
@@ -21,7 +22,7 @@
                             <h4 class="home-title text-theme">
                                 {{-- {{ $contents->aboutMissionTitle1->text }} --}}
                             </h4>
-                            <p class="sec-4 bg-light p-3 bg-opacity-75 rounded-2">
+                            <p class="sec-4 bg-light rounded-2 bg-opacity-75 p-3">
                                 {{ $contents->aboutOurVisionsDescription->text }}
                             </p>
                         </div>
@@ -69,7 +70,7 @@
                     --}}
                 </div>
             </div>
-            
+
             <div class="offset-lg-2"></div>
         </div>
     </div>

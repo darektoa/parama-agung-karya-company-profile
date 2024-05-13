@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog\Blog;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -24,8 +25,17 @@ class BlogController extends Controller
      * 
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function show(string $blogId)
     {
-        return view('pages.guest.blog.detail.index');
+        $blog = Blog::findOrFail($blogId);
+        $otherBlogs = Blog::where('id', '!=', $blogId)
+            ->latest()
+            ->get();
+        
+        return view('pages.guest.blog.detail.index')
+            ->with([
+                'blog' => $blog,
+                'otherBlogs' => $otherBlogs,
+            ]);
     }
 }

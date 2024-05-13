@@ -13,7 +13,7 @@
             <a
                 href="#"
                 class="m-0">
-                Portfolio
+                Blog
             </a>
         </li>
     </ol>

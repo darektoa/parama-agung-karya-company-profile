@@ -7,7 +7,7 @@
     @include('pages.guest.blog._partials.breadcrumb')
 
     <section
-        class="post-wthree align-w3"
+        class="post-wthree py-4"
         id="blog">
         <div class="container">
             @include('pages.guest.blog.detail._partials.heading')
