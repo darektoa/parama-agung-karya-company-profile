@@ -118,16 +118,16 @@ Route::prefix('/dashboard')->name('dashboard')->group(function() {
 
     // DASHBOARD/PORTFOLIOS
     Route::prefix('/portfolios')->name('.portfolio')->group(function() {
-        Route::get('/', [Dashboard\portfolioController::class, 'index']);
-        Route::post('/', [Dashboard\portfolioController::class, 'store'])->name('.post');
-        Route::get('/create', [Dashboard\portfolioController::class, 'create'])->name('.create');
+        Route::get('/', [Dashboard\PortfolioController::class, 'index']);
+        Route::post('/', [Dashboard\PortfolioController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\PortfolioController::class, 'create'])->name('.create');
         
         // DASHBOARD/PORTFOLIOS/BY_PORTFOLIO_ID
         Route::prefix('/{portfolioId}')->name('.byPortfolioId')->group(function() {
-            Route::get('/', [Dashboard\portfolioController::class, 'show']);
-            Route::put('/', [Dashboard\portfolioController::class, 'update'])->name('.put');
-            Route::delete('/', [Dashboard\portfolioController::class, 'destroy'])->name('.delete');
-            Route::get('/edit', [Dashboard\portfolioController::class, 'edit'])->name('.edit');
+            Route::get('/', [Dashboard\PortfolioController::class, 'show']);
+            Route::put('/', [Dashboard\PortfolioController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\PortfolioController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\PortfolioController::class, 'edit'])->name('.edit');
         });
     });
 });
