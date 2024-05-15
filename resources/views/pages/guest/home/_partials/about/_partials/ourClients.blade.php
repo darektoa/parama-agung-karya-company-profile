@@ -5,42 +5,24 @@
             class="slide carousel"
             data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="active carousel-item">
-                    <div
-                        class="row"
-                        style="height: 5rem">
-                        <img
-                            src="images/clients/1.png"
-                            class="h-100 object-fit-contain col-6 col-lg-4 px-0"
-                            alt="..." />
-                        <img
-                            src="images/clients/2.png"
-                            class="h-100 object-fit-contain col-6 col-lg-4 px-0"
-                            alt="..." />
-                        <img
-                            src="images/clients/3.png"
-                            class="h-100 object-fit-contain col-6 col-lg-4 px-0"
-                            alt="..." />
+
+                @for($i = 0; $i < $clients->count(); $i+=3)
+                    <div class="carousel-item @if($i === 0) active @endif">
+                        <div
+                            class="row"
+                            style="height: 5rem">
+                            
+                            @for($j = $i; $j < $clients->count(); $j++)
+                                <img
+                                    src="{{ \StorageHelper::url($clients[$j]?->uri ?? '') }}"
+                                    class="h-100 object-fit-contain col-4 px-0"
+                                    alt="{{ $clients[$j]?->alt ?? '' }}" />
+                            @endfor
+
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div
-                        class="row"
-                        style="height: 5rem">
-                        <img
-                            src="images/clients/4.png"
-                            class="h-100 object-fit-contain col-6 col-lg-4 px-0"
-                            alt="..." />
-                        <img
-                            src="images/clients/5.png"
-                            class="h-100 object-fit-contain col-6 col-lg-4 px-0"
-                            alt="..." />
-                        <img
-                            src="images/clients/6.png"
-                            class="h-100 object-fit-contain col-6 col-lg-4 px-0"
-                            alt="..." />
-                    </div>
-                </div>
+                @endfor
+
             </div>
         </div>
     </div>

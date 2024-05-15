@@ -19,7 +19,7 @@
         </div>
         <div class="carousel-inner h-100">
             @foreach ($banners as $banner)
-                <div class="h-100 active carousel-item">
+                <div class="h-100 carousel-item @if($loop->iteration === 1) active @endif">
                     <img
                         src="{{ \StorageHelper::url($banner->uri) }}"
                         class="d-block w-100 h-100 object-fit-cover"

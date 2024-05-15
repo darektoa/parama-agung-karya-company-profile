@@ -18,5 +18,5 @@ yarn-error.log
 /.idea
 /.vscode
 
-!/public/storage/seeders
+!/public/storage/seeders/
 !/public/storage/seeders/**
