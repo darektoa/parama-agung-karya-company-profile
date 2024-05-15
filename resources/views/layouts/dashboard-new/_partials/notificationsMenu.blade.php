@@ -1,4 +1,4 @@
-<li class="relative">
+<li class="relative z-40">
     <button
         class="relative rounded-md align-middle focus:outline-none focus:ring"
         @click="toggleNotificationsMenu"

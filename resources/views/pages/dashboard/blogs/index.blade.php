@@ -4,76 +4,16 @@
     @include('pages.dashboard.blogs._partials.breadcrumb')
 
     <div class="container mx-auto grid auto-rows-max px-6">
-        <header class="flex w-full items-center">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Blogs</h2>
-            <a
-                href="{{ route('dashboard.blog.create') }}"
-                class="btn btn-outline btn-primary btn-sm ml-4">
-                Add
-            </a>
-        </header>
+        @include('pages.dashboard.blogs._partials.header')
 
         <section
-            class="grid grid-flow-row grid-cols-3 gap-6"
+            class="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
             x-data="{ deleteId: null, deleteTitle: null }">
             @foreach ($blogs as $blog)
-                <div class="card w-full bg-base-100 shadow-xl">
-                    <figure class="bg-slate-400">
-                        <img
-                            class="h-[100%] w-full object-cover"
-                            src="{{ $blog->thumbnail?->uri ? \StorageHelper::url($blog->thumbnail?->uri) : '/images/illustrations/snap_the_moment_bg.svg' }}"
-                            loading="lazy"
-                            alt=" " />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">{{ $blog->title }}</h2>
-                        <p>{{ Str::limit($blog->content, 72) }}</p>
-                        <div class="card-actions justify-end">
-                            <a
-                                href="{{ route('dashboard.blog.byBlogId.edit', $blog->id) }}"
-                                class="btn btn-warning btn-sm">
-                                Edit
-                            </a>
-                            <button
-                                x-on:click="
-                                    deleteId = '{{ $blog->id }}'
-                                    deleteTitle = '{{ $blog->title }}'
-                                "
-                                onclick="deleteBlogModal.showModal()"
-                                class="btn btn-error btn-sm">
-                                Delete
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                @include('pages.dashboard.blogs._partials.blogCard')
             @endforeach
 
-            <dialog
-                id="deleteBlogModal"
-                class="modal">
-                <div class="modal-box">
-                    <h3
-                        class="text-lg font-bold"
-                        x-text="deleteTitle"></h3>
-                    <p class="py-4">Are you sure to delete it?</p>
-                    <div class="modal-action">
-                        <form method="dialog">
-                            <button class="btn btn-info mr-2">Close</button>
-                        </form>
-                        <form
-                            method="POST"
-                            :action="'{{ route('dashboard.blog.byBlogId.delete', '') }}/' + deleteId">
-                            @method('DELETE')
-                            @csrf
-                            <button
-                                class="btn btn-outline btn-error"
-                                type="submit">
-                                Delete
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </dialog>
+            @include('pages.dashboard.blogs._partials.deleteBlogConfirm')
         </section>
     </div>
 @endsection

@@ -5,25 +5,8 @@
     </div>
     <div class="pb-lg-5 pb-sm-4">
         <ul class="demo row">
-            @foreach ($projects as $project)
-                <li class="col-lg-4">
-                    <div class="img-grid rounded-2 position-relative overflow-hidden shadow-lg">
-                        <div class="w-100">
-                            <img
-                                src="{{ $project->thumbnail?->uri ? \StorageHelper::url($project->thumbnail?->uri) : '/images/illustrations/snap_the_moment_bg.svg' }}"
-                                alt=" "
-                                height="240"
-                                class="object-fit-cover w-100" />
-                            <div
-                                class="position-absolute w-100 d-flex flex-column justify-content-start bottom-0 px-4 py-3"
-                                style="background-color: rgba(255, 255, 255, 0.8)">
-                                <h3 class="main-title-w3pvt fs-6">
-                                    {{ $project->title }}
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+            @foreach ($certificates as $certificate)
+                @include('pages.guest.home._partials.certificate._partials.certificateCard')
             @endforeach
         </ul>
     </div>

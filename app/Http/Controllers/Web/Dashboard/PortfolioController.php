@@ -44,6 +44,8 @@ class PortfolioController extends Controller
                 'title' => $request->title,
                 'slug'  => Str::slug($request->title) . Str::random(4),
                 'content' => $request->content,
+                'start_on' => $request->start_on,
+                'end_on' => $request->end_on,
             ]);
 
             if($thumbnail->isReadable()) {
@@ -74,7 +76,7 @@ class PortfolioController extends Controller
      */
     public function edit(string $portfolioId)
     {
-        $portfolio = Portfolio::findOrFail($portfolioId);
+        $portfolio = Portfolio::with('thumbnail')->findOrFail($portfolioId);
 
         return view('pages.dashboard.portfolios.edit.index')
             ->with('portfolio', $portfolio);
@@ -91,7 +93,9 @@ class PortfolioController extends Controller
             
             if($data) $portfolio->update($data->only([
                 'title',
-                'content'
+                'content',
+                'start_on',
+                'end_on'
             ])->toArray());
                 
             if($thumbnail = $request->file('thumbnail')) {
@@ -119,7 +123,7 @@ class PortfolioController extends Controller
      */
     public function destroy(string $portfolioId)
     {
-        $portfolio = Portfolio::findOrFail($portfolioId);
+        $portfolio = Portfolio::with('thumbnail')->findOrFail($portfolioId);
 
         if($portfolio->thumbnail) {
             StorageHelper::deletePublic($portfolio->thumbnail);

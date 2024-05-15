@@ -10,6 +10,17 @@ Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/portfolio', [PortfolioController::class, 'index']);
 
 
+
+/**
+ * BLOGS
+ */
+Route::prefix('/blogs')->group(function() {
+    Route::get('/', [BlogController::class, 'index'])->name('blogs');
+    Route::get('/{blogId}', [BlogController::class, 'show'])->name('blogs.byBlogId');
+});
+
+
+
 /**
  * AUTH
  */
@@ -25,53 +36,98 @@ Route::prefix('/auth')->group(function() {
 });
 
 
+
 /**
  * DASHBOARD
  */
-Route::prefix('/dashboard')->group(function() {
-    Route::get('/', [Dashboard\HomeController::class, 'index'])->name('dashboard.home');
+Route::prefix('/dashboard')->name('dashboard')->group(function() {
+    Route::get('/', [Dashboard\HomeController::class, 'index'])->name('.home');
     
-    Route::prefix('/blogs')->group(function() {
-        Route::get('/', [Dashboard\BlogController::class, 'index'])->name('dashboard.blog');
-        Route::post('/', [Dashboard\BlogController::class, 'store'])->name('dashboard.blog.post');
-        Route::get('/create', [Dashboard\BlogController::class, 'create'])->name('dashboard.blog.create');
 
-        // BY BLOG ID
-        Route::prefix('/{blogId}')->group(function() {
-            Route::get('/', [Dashboard\BlogController::class, 'show'])->name('dashboard.blog.byBlogId');
-            Route::put('/', [Dashboard\BlogController::class, 'update'])->name('dashboard.blog.byBlogId.put');
-            Route::delete('/', [Dashboard\BlogController::class, 'destroy'])->name('dashboard.blog.byBlogId.delete');
-            Route::get('/edit', [Dashboard\BlogController::class, 'edit'])->name('dashboard.blog.byBlogId.edit');
+    // DASHBOARD/BLOGS
+    Route::prefix('/blogs')->name('.blog')->group(function() {
+        Route::get('/', [Dashboard\BlogController::class, 'index']);
+        Route::post('/', [Dashboard\BlogController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\BlogController::class, 'create'])->name('.create');
+
+        // DASHBOARD/BLOGS/BY_BLOG_ID
+        Route::prefix('/{blogId}')->name('.byBlogId')->group(function() {
+            Route::get('/', [Dashboard\BlogController::class, 'show']);
+            Route::put('/', [Dashboard\BlogController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\BlogController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\BlogController::class, 'edit'])->name('.edit');
         });
     });
     
-    Route::prefix('/contents')->group(function() {
-        Route::get('/', [Dashboard\ContentController::class, 'index'])->name('dashboard.content');
-        Route::get('/{contentId}', [Dashboard\ContentController::class, 'show'])->name('dashboard.content.byContentId');
-        Route::put('/{contentId}', [Dashboard\ContentController::class, 'update'])->name('dashboard.content.byContentId.put');
+
+    // DASHBOARD/BANNERS
+    Route::prefix('/banners')->name('.banners')->group(function() {
+        Route::get('/', [Dashboard\BannerController::class, 'index']);
+        Route::post('/', [Dashboard\BannerController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\BannerController::class, 'create'])->name('.create');
+
+        // DASHBOARD/BANNERS/BY_BANNER_ID
+        Route::prefix('/{bannerId}')->name('.byBannerId')->group(function() {
+            Route::get('/', [Dashboard\BannerController::class, 'show']);
+            Route::put('/', [Dashboard\BannerController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\BannerController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\BannerController::class, 'edit'])->name('.edit');
+        });
     });
     
-    Route::prefix('/portfolios')->group(function() {
-        Route::get('/', [Dashboard\portfolioController::class, 'index'])->name('dashboard.portfolio');
-        Route::post('/', [Dashboard\portfolioController::class, 'store'])->name('dashboard.portfolio.post');
-        Route::get('/create', [Dashboard\portfolioController::class, 'create'])->name('dashboard.portfolio.create');
+
+    // DASHBOARD/CERTIFICATES
+    Route::prefix('/certificates')->name('.certificates')->group(function() {
+        Route::get('/', [Dashboard\CertificateController::class, 'index']);
+        Route::post('/', [Dashboard\CertificateController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\CertificateController::class, 'create'])->name('.create');
+
+        // DASHBOARD/CERTIFICATES/BY_CERTIFICATE_ID
+        Route::prefix('/{certificateId}')->name('.byCertificateId')->group(function() {
+            Route::get('/', [Dashboard\CertificateController::class, 'show']);
+            Route::put('/', [Dashboard\CertificateController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\CertificateController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\CertificateController::class, 'edit'])->name('.edit');
+        });
+    });
+    
+
+    // DASHBOARD/CLIENTS
+    Route::prefix('/clients')->name('.clients')->group(function() {
+        Route::get('/', [Dashboard\ClientController::class, 'index']);
+        Route::post('/', [Dashboard\ClientController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\ClientController::class, 'create'])->name('.create');
+
+        // DASHBOARD/CLIENTS/BY_CLIENT_ID
+        Route::prefix('/{clientId}')->name('.byClientId')->group(function() {
+            Route::get('/', [Dashboard\ClientController::class, 'show']);
+            Route::put('/', [Dashboard\ClientController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\ClientController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\ClientController::class, 'edit'])->name('.edit');
+        });
+    });
+    
+
+    // DASHBOARD/CONTENTS
+    Route::prefix('/contents')->name('.content')->group(function() {
+        Route::get('/', [Dashboard\ContentController::class, 'index']);
+        Route::get('/{contentId}', [Dashboard\ContentController::class, 'show'])->name('.byContentId');
+        Route::put('/{contentId}', [Dashboard\ContentController::class, 'update'])->name('.byContentId.put');
+    });
+    
+
+    // DASHBOARD/PORTFOLIOS
+    Route::prefix('/portfolios')->name('.portfolio')->group(function() {
+        Route::get('/', [Dashboard\portfolioController::class, 'index']);
+        Route::post('/', [Dashboard\portfolioController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\portfolioController::class, 'create'])->name('.create');
         
-        // BY PORTFOLIO ID
-        Route::prefix('/{portfolioId}')->group(function() {
-            Route::get('/', [Dashboard\portfolioController::class, 'show'])->name('dashboard.portfolio.byPortfolioId');
-            Route::put('/', [Dashboard\portfolioController::class, 'update'])->name('dashboard.portfolio.byPortfolioId.put');
-            Route::delete('/', [Dashboard\portfolioController::class, 'destroy'])->name('dashboard.portfolio.byPortfolioId.delete');
-            Route::get('/edit', [Dashboard\portfolioController::class, 'edit'])->name('dashboard.portfolio.byPortfolioId.edit');
+        // DASHBOARD/PORTFOLIOS/BY_PORTFOLIO_ID
+        Route::prefix('/{portfolioId}')->name('.byPortfolioId')->group(function() {
+            Route::get('/', [Dashboard\portfolioController::class, 'show']);
+            Route::put('/', [Dashboard\portfolioController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\portfolioController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\portfolioController::class, 'edit'])->name('.edit');
         });
     });
 });
-
-
-/**
- * BLOGS
- */
-Route::prefix('/blogs')->group(function() {
-    Route::get('/', [BlogController::class, 'index'])->name('blogs');
-    Route::get('/{blogId}', [BlogController::class, 'show'])->name('blogs.byBlogId');
-});
-

@@ -42,5 +42,52 @@
                 </main>
             </div>
         </div>
+
+        <script>
+            function isBloabable(file) {
+                const { type } = file;
+
+                return type.startsWith('image/') || type.startsWith('video/') || type.startsWith('audio/');
+            }
+
+            function toBlob(file) {
+                const fileReader = new FileReader();
+                fileReader.readAsArrayBuffer(file);
+
+                const promise = new Promise((resolve, reject) => {
+                    fileReader.addEventListener('load', (event) => {
+                        const arrayBuffer = event.target.result;
+                        const blob = new Blob([arrayBuffer]);
+                        resolve(blob);
+                    });
+
+                    fileReader.addEventListener('error', (event) => {
+                        reject(null);
+                    });
+                });
+
+                return promise;
+            }
+
+            function toDataURL(file) {
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(file);
+
+                const promise = new Promise((resolve, reject) => {
+                    fileReader.addEventListener('load', (event) => {
+                        const dataURL = event.target.result;
+                        resolve(dataURL);
+                    });
+
+                    fileReader.addEventListener('error', (event) => {
+                        reject(null);
+                    });
+                });
+
+                return promise;
+            }
+        </script>
+
+        @yield('scripts')
     </body>
 </html>

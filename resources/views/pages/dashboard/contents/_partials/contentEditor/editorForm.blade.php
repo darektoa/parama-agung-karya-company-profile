@@ -26,7 +26,7 @@
                 <b class="label-text">IMAGE</b>
             </div>
             <div class="group/contentEditorImageInputCard relative w-full max-w-80 overflow-hidden rounded-lg">
-                <figure class="w-full bg-base-content object-contain">
+                <figure class="w-full bg-base-300/60 object-contain">
                     <img
                         src="{{ $content?->image?->uri ? StorageHelper::url($content?->image?->uri ?? '') : '/images/illustrations/snap_the_moment_bg.svg' }}"
                         class="aspect-video w-80"

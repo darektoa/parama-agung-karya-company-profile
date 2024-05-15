@@ -8,7 +8,7 @@
 
     <label class="form-control mb-1">
         <div class="flex flex-col px-1 py-2">
-            <h5 class="label-text text-lg">Thumbnail</h5>
+            <h5 class="label-text text-base">Thumbnail</h5>
         </div>
         <div class="group/contentEditorImageInputCard relative w-full max-w-80 overflow-hidden rounded-lg">
             <figure class="w-full bg-base-300 object-contain">
@@ -32,7 +32,7 @@
 
     <label class="form-control mb-1 w-full max-w-lg">
         <div class="label">
-            <h5 class="label-text text-lg">Title</h5>
+            <h5 class="label-text text-base">Title</h5>
         </div>
         <input
             required
@@ -48,7 +48,7 @@
 
     <label class="form-control mb-10 w-full max-w-lg">
         <div class="flex flex-col px-1 py-2">
-            <h5 class="label-text text-lg">Description</h5>
+            <h5 class="label-text text-base">Description</h5>
             {{-- <small class="text-xs text-gray-400">Fill the content</small> --}}
         </div>
         <textarea

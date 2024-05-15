@@ -15,7 +15,10 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('slug')->unique();
             $table->string('title');
-            $table->text('content');
+            $table->text('content')->nullable();
+            $table->date('start_on');
+            $table->date('end_on');
+            $table->json('detail')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

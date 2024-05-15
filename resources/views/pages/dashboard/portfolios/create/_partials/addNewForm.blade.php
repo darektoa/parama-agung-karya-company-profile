@@ -7,7 +7,7 @@
 
     <label class="form-control mb-1">
         <div class="flex flex-col px-1 py-2">
-            <h5 class="label-text text-lg">Thumbnail</h5>
+            <h5 class="label-text text-base">Thumbnail</h5>
         </div>
         <div class="group/contentEditorImageInputCard relative w-full max-w-80 overflow-hidden rounded-lg">
             <figure class="w-full bg-slate-400 object-contain">
@@ -32,7 +32,7 @@
 
     <label class="form-control mb-1 w-full max-w-lg">
         <div class="label">
-            <h5 class="label-text text-lg">Title</h5>
+            <h5 class="label-text text-base">Title</h5>
         </div>
         <input
             required
@@ -45,9 +45,42 @@
         </span>
     </label>
 
-    <label class="form-control mb-10 w-full max-w-lg">
+    <div class="flex w-full gap-4">
+        <label class="form-control mb-1 w-full">
+            <div class="flex flex-col px-1 py-2">
+                <h5 class="label-text text-base">Start On</h5>
+                {{-- <small class="text-xs text-gray-400">Fill the content</small> --}}
+            </div>
+            <input
+                required
+                type="date"
+                class="peer textarea textarea-bordered w-full resize-none"
+                name="start_on" />
+            <span
+                class="px-1 py-2 text-xs text-red-600 opacity-0 duration-300 peer-invalid:opacity-100 dark:text-red-400">
+                The field must be fill.
+            </span>
+        </label>
+        <label class="form-control mb-1 w-full">
+            <div class="flex flex-col px-1 py-2">
+                <h5 class="label-text text-base">End On</h5>
+                {{-- <small class="text-xs text-gray-400">Fill the content</small> --}}
+            </div>
+            <input
+                required
+                type="date"
+                class="peer textarea textarea-bordered w-full resize-none"
+                name="end_on" />
+            <span
+                class="px-1 py-2 text-xs text-red-600 opacity-0 duration-300 peer-invalid:opacity-100 dark:text-red-400">
+                The field must be fill.
+            </span>
+        </label>
+    </div>
+
+    <label class="form-control mb-10 w-full">
         <div class="flex flex-col px-1 py-2">
-            <h5 class="label-text text-lg">Description</h5>
+            <h5 class="label-text text-base">Description</h5>
             {{-- <small class="text-xs text-gray-400">Fill the content</small> --}}
         </div>
         <textarea

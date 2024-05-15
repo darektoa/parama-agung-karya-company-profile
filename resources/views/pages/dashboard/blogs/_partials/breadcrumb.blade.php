@@ -1,4 +1,4 @@
-<div class="breadcrumbs sticky top-0 z-40 border-b border-b-gray-100 px-6 text-sm backdrop-blur-xl">
+<div class="breadcrumbs sticky top-0 z-30 border-b border-b-gray-100 px-6 text-sm backdrop-blur-xl">
     <ul>
         <li>
             <a

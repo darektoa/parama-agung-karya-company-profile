@@ -30,7 +30,9 @@
             <span class="d-flex text-primary border-end me-3 p-3">
                 <i class="fa-solid fa-home"></i>
             </span>
-            <address class="mb-0">
+            <address
+                class="mb-0"
+                translate="no">
                 {{ $contents->contactOfficeLocation->text }}
             </address>
         </div>

@@ -11,8 +11,26 @@
             stroke-width="2"
             viewBox="0 0 24 24"
             stroke="currentColor">
-            <path
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            <line
+                x1="17"
+                y1="10"
+                x2="3"
+                y2="10"></line>
+            <line
+                x1="21"
+                y1="6"
+                x2="3"
+                y2="6"></line>
+            <line
+                x1="21"
+                y1="14"
+                x2="3"
+                y2="14"></line>
+            <line
+                x1="17"
+                y1="18"
+                x2="3"
+                y2="18"></line>
         </svg>
         Blogs
     </a>

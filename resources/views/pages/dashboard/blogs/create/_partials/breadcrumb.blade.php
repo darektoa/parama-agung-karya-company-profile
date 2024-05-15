@@ -1,4 +1,4 @@
-<div class="breadcrumbs sticky top-0 border-b border-b-neutral px-6 text-sm backdrop-blur-xl">
+<div class="breadcrumbs sticky top-0 z-30 border-b border-b-neutral px-6 text-sm backdrop-blur-xl">
     <ul>
         <li>
             <a
@@ -14,6 +14,6 @@
                 Blogs
             </a>
         </li>
-        <li>Add New Blog</li>
+        <li>Post New Blog</li>
     </ul>
 </div>

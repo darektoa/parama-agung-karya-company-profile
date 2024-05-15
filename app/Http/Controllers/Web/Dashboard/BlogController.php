@@ -74,7 +74,7 @@ class BlogController extends Controller
      */
     public function edit(string $blogId)
     {
-        $blog = Blog::findOrFail($blogId);
+        $blog = Blog::with('thumbnail')->findOrFail($blogId);
 
         return view('pages.dashboard.blogs.edit.index')
             ->with('blog', $blog);
@@ -119,7 +119,7 @@ class BlogController extends Controller
      */
     public function destroy(string $blogId)
     {
-        $blog = Blog::findOrFail($blogId);
+        $blog = Blog::with('thumbnail')->findOrFail($blogId);
 
         if($blog->thumbnail) {
             StorageHelper::deletePublic($blog->thumbnail);
