@@ -31,38 +31,18 @@
     "file": "assets/fa-v4compatibility-BRdYr4HJ.woff2",
     "src": "public/fonts/fa-v4compatibility.woff2"
   },
-  "public/images/banner.jpg": {
-    "file": "assets/banner-IPTd0Pn0.jpg",
-    "src": "public/images/banner.jpg"
-  },
-  "public/images/g3.jpg": {
-    "file": "assets/g3-CWLH1Q-K.jpg",
-    "src": "public/images/g3.jpg"
-  },
-  "public/images/g6.jpg": {
-    "file": "assets/g6-DTJjQQBq.jpg",
-    "src": "public/images/g6.jpg"
-  },
-  "public/images/inner-banner.jpg": {
-    "file": "assets/inner-banner-CT_dEvb-.jpg",
-    "src": "public/images/inner-banner.jpg"
-  },
-  "public/images/slide.jpg": {
-    "file": "assets/slide-Ct1k-4hg.jpg",
-    "src": "public/images/slide.jpg"
-  },
   "resources/css/layouts/dashboard/index.css": {
-    "file": "assets/index-CgIL84IQ.css",
+    "file": "assets/index-nAt5GxLV.css",
     "src": "resources/css/layouts/dashboard/index.css",
     "isEntry": true
   },
   "resources/css/layouts/guest/index.css": {
-    "file": "assets/index-Dz40PVRT.css",
+    "file": "assets/index-BxxAKhTn.css",
     "src": "resources/css/layouts/guest/index.css",
     "isEntry": true
   },
   "resources/css/libraries/tailwind.css": {
-    "file": "assets/tailwind-BVf1DjaA.css",
+    "file": "assets/tailwind-_8CT1_Jf.css",
     "src": "resources/css/libraries/tailwind.css",
     "isEntry": true
   },

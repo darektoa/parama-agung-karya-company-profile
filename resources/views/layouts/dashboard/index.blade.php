@@ -35,9 +35,9 @@
         </div>
 
         @vite(['resources/js/layouts/dashboard/index.js'])
-        <script src="{{ Vite::asset('resources/js/utilities/isBlobable.js') }}"></script>
-        <script src="{{ Vite::asset('resources/js/utilities/toBlob.js') }}"></script>
-        <script src="{{ Vite::asset('resources/js/utilities/toDataURL.js') }}"></script>
+        <script src="{{ asset('resources/js/utilities/isBlobable.jpg') }}"></script>
+        <script src="{{ asset('resources/js/utilities/toBlob.js') }}"></script>
+        <script src="{{ asset('resources/js/utilities/toDataURL.js') }}"></script>
         @yield('scripts')
     </body>
 </html>
