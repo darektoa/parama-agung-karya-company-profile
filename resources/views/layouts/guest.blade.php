@@ -35,7 +35,7 @@
 
         @vite([
             'resources/css/layouts/guest/index.css',
-            'resources/js/app.js',
+            'resources/js/layouts/guest/index.js',
         ])
         @yield('head')
     </head>

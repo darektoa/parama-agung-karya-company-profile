@@ -1,5 +1,6 @@
-@import '../../libraries/bootstrap.css';
+@import 'bootstrap/dist/css/bootstrap';
 @import '../../libraries/fontawesome.min.css';
 @import '../../custom/style.css';
+/* @import '../../libraries/bootstrap.css'; */
 /* @import '../../custom/single.css'; */
 /* @import '../../libraries/tailwind.css'; */

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html
+    x-data="initialData"
     :data-theme="dark ? 'dark' : null"
-    x-data="data()"
     lang="us">
     <head>
         <meta charset="UTF-8" />
@@ -13,18 +13,9 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
             rel="stylesheet" />
-        <link rel="stylesheet" />
-        <script
-            src="{{ asset('libraries/alpine@v2_x_x.min.js') }}"
-            defer=""></script>
-        <script src="{{ asset('libraries/init-alpine.js') }}"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-        @vite([
-            'resources/css/layouts/dashboard/index.css',
-            'resources/js/app.js',
-        ])
-
+        @vite(['resources/css/layouts/dashboard/index.css'])
         @yield('head')
     </head>
     <body>
@@ -43,51 +34,10 @@
             </div>
         </div>
 
-        <script>
-            function isBloabable(file) {
-                const { type } = file;
-
-                return type.startsWith('image/') || type.startsWith('video/') || type.startsWith('audio/');
-            }
-
-            function toBlob(file) {
-                const fileReader = new FileReader();
-                fileReader.readAsArrayBuffer(file);
-
-                const promise = new Promise((resolve, reject) => {
-                    fileReader.addEventListener('load', (event) => {
-                        const arrayBuffer = event.target.result;
-                        const blob = new Blob([arrayBuffer]);
-                        resolve(blob);
-                    });
-
-                    fileReader.addEventListener('error', (event) => {
-                        reject(null);
-                    });
-                });
-
-                return promise;
-            }
-
-            function toDataURL(file) {
-                const fileReader = new FileReader();
-                fileReader.readAsDataURL(file);
-
-                const promise = new Promise((resolve, reject) => {
-                    fileReader.addEventListener('load', (event) => {
-                        const dataURL = event.target.result;
-                        resolve(dataURL);
-                    });
-
-                    fileReader.addEventListener('error', (event) => {
-                        reject(null);
-                    });
-                });
-
-                return promise;
-            }
-        </script>
-
+        @vite(['resources/js/layouts/dashboard/index.js'])
+        <script src="{{ Vite::asset('resources/js/utilities/isBlobable.js') }}"></script>
+        <script src="{{ Vite::asset('resources/js/utilities/toBlob.js') }}"></script>
+        <script src="{{ Vite::asset('resources/js/utilities/toDataURL.js') }}"></script>
         @yield('scripts')
     </body>
 </html>

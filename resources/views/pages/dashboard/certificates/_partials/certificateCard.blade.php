@@ -24,7 +24,7 @@
             <button
                 x-on:click="
                     deleteId = '{{ $certificate->id }}'
-                    deleteTitle = '{{ $certificate->title }}'
+                    deleteTitle = '{{ addslashes($certificate->title) }}'
                 "
                 onclick="deleteCertificateModal.showModal()"
                 class="btn btn-error btn-sm">

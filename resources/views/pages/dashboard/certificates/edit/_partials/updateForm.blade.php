@@ -80,7 +80,7 @@
 </form>
 
 @section('scripts')
-    <script>
+    <script type="module">
         const elmnt = document.getElementById('inputImage').addEventListener('change', async (evt) => {
             const baseURL = '{{ route('dashboard.certificates.byCertificateId.put', request()->certificateId) }}';
             const file = evt.target.files[0];

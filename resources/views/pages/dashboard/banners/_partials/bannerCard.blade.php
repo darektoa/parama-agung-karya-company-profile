@@ -21,7 +21,7 @@
             <button
                 x-on:click="
                     deleteId = '{{ $banner->id }}'
-                    deleteTitle = '{{ $banner->title }}'
+                    deleteTitle = '{{ addslashes($banner->title) }}'
                 "
                 onclick="deleteBannerModal.showModal()"
                 class="btn btn-error btn-sm">

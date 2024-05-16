@@ -1,1 +1,0 @@
-import '../../public/libraries/init-alpine.js';

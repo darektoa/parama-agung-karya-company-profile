@@ -18,7 +18,7 @@
             <button
                 x-on:click="
                     deleteId = '{{ $blog->id }}'
-                    deleteTitle = '{{ $blog->title }}'
+                    deleteTitle = '{{ addslashes($blog->title) }}'
                 "
                 onclick="deleteBlogModal.showModal()"
                 class="btn btn-error btn-sm">
