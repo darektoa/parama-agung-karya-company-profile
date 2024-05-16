@@ -24,7 +24,7 @@
 
         @vite([
             'resources/css/libraries/tailwind.css', 
-            'resources/js/layouts/guest/index.js'
+            'resources/js/layouts/dashboard/index.js'
         ])
         @yield('head')
     </head>
