@@ -22,7 +22,7 @@ class ViewShareServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Facades\View::composer('layouts.dashboard-new._partials.sidebar', function(View $view) {
+        Facades\View::composer('layouts.dashboard._partials.sidebar', function (View $view) {
             $contentDirectories = Directory::where('depth', 0)
                 ->orderBy('name')
                 ->get();

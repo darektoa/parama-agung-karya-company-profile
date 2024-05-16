@@ -28,7 +28,7 @@
         <ul>
             @foreach ($directory->directories as $subDirectory)
                 @include(
-                    "layouts.dashboard-new._partials.sidemenu.contents.directoryItem",
+                    "layouts.dashboard._partials.sidemenu.contents.directoryItem",
                     [
                         "directory" => $subDirectory,
                     ]
@@ -37,7 +37,7 @@
 
             @foreach ($directory->contents as $content)
                 @include(
-                    "layouts.dashboard-new._partials.sidemenu.contents.documentItem",
+                    "layouts.dashboard._partials.sidemenu.contents.documentItem",
                     [
                         "content" => $content,
                     ]

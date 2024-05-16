@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 
 <html
-    lang="id"
-    data-theme="garden">
+    x-data="initialData"
+    :data-theme="dark ? 'dark' : null"
+    lang="us">
     <head>
         <meta charset="UTF-8" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0" />
-        <meta
-            http-equiv="X-UA-Compatible"
-            content="ie=edge" />
+        <title>Admin Dashboard</title>
         <link
-            rel="icon"
-            href="/images/logo.svg" />
-        <title>PT Parama Agung Karya</title>
-        <link
-            href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
             rel="stylesheet" />
-        <link
-            href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
-            rel="stylesheet" />
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-        @vite(['resources/css/libraries/tailwind.css', 'resources/js/app.js'])
+        @vite(['resources/css/layouts/dashboard/index.css'])
         @yield('head')
     </head>
     <body>
-        @include('layouts.dashboard._partials.navbar')
+        <div
+            class="flex h-screen w-full bg-gray-50 dark:bg-gray-900"
+            :class="{ 'overflow-hidden': isSideMenuOpen}">
+            @include('layouts.dashboard._partials.sidebar')
+            @include('layouts.dashboard._partials.mobileSidebar')
 
-        @yield('content')
+            <div class="flex flex-1 flex-col">
+                @include('layouts.dashboard._partials.navbar')
+
+                <main class="h-full overflow-y-auto pb-16">
+                    @yield('content')
+                </main>
+            </div>
+        </div>
+
+        @vite(['resources/js/layouts/dashboard/index.js'])
+        <script src="{{ Vite::asset('resources/js/utilities/isBlobable.js') }}"></script>
+        <script src="{{ Vite::asset('resources/js/utilities/toBlob.js') }}"></script>
+        <script src="{{ Vite::asset('resources/js/utilities/toDataURL.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>

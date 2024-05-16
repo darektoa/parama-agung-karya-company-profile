@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-new.index')
+@extends('layouts.dashboard.index')
 
 @section('content')
     @include('pages.dashboard.banners._partials.breadcrumb')

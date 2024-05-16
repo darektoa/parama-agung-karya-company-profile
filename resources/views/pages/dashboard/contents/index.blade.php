@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-new.index')
+@extends('layouts.dashboard.index')
 
 @section('content')
     <div class="container mx-auto grid h-full auto-rows-max px-6">
