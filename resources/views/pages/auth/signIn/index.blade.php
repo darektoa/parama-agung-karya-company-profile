@@ -1,57 +1,69 @@
-@extends('layouts.auth')
+@extends('layouts.auth.index')
 
 @section('content')
-    <main class="flex h-full w-full items-center justify-center">
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title mb-4">Masuk ke Dashboard</h2>
+    <div class="flex h-full min-h-screen w-full items-center bg-gray-50 p-6 dark:bg-gray-900">
+        <div class="mx-auto max-w-4xl flex-1 overflow-hidden rounded-lg bg-white shadow-xl dark:bg-gray-800">
+            <main class="flex flex-col overflow-y-auto md:flex-row">
+                <div class="h-32 md:h-auto md:w-1/2">
+                    <img
+                        aria-hidden="true"
+                        class="h-full w-full object-cover dark:hidden"
+                        src="{{ asset('images/stocks/login-office.jpeg') }}"
+                        alt="Office" />
+                    <img
+                        aria-hidden="true"
+                        class="hidden h-full w-full object-cover dark:block"
+                        src="{{ asset('images/stocks/login-office-dark.jpeg') }}"
+                        alt="Office" />
+                </div>
+                
+                <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+                    <form
+                        class="w-full"
+                        method="POST"
+                        action="{{ route('signIn.post') }}">
+                        <h1 class="mb-4 text-2xl font-semibold text-gray-700 dark:text-gray-200">Sign In</h1>
 
-                <form
-                    action="{{ route('signIn.post') }}"
-                    method="POST"
-                    class="flex flex-col gap-4">
-                    @csrf
-                    <label class="input input-bordered flex items-center gap-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            class="h-4 w-4 opacity-70">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-                        </svg>
-                        <input
-                            type="text"
-                            class="grow"
-                            name="username"
-                            placeholder="Email / Username" />
-                    </label>
-                    <label class="input input-bordered flex items-center gap-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            class="h-4 w-4 opacity-70">
-                            <path
-                                fill-rule="evenodd"
-                                d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <input
-                            type="password"
-                            class="grow"
-                            name="password"
-                            placeholder="Password" />
-                    </label>
-                    <div class="card-actions justify-end">
+                        @csrf
+
+                        <label class="form-control mb-2 w-full">
+                            <div class="label">
+                                <span class="label-text">Email</span>
+                            </div>
+                            <input
+                                type="text"
+                                name="username"
+                                placeholder="Type email here . . ."
+                                class="input input-bordered w-full" />
+                        </label>
+
+                        <label class="form-control mb-2 w-full">
+                            <div class="label">
+                                <span class="label-text">Password</span>
+                            </div>
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="*************"
+                                class="input input-bordered w-full" />
+                        </label>
+
                         <button
-                            class="btn btn-primary"
-                            type="submit">
-                            OKE
+                            type="submit"
+                            class="btn btn-primary mt-4 w-full">
+                            Submit
                         </button>
-                    </div>
-                </form>
-            </div>
+
+                        <p class="mt-4">
+                            <a
+                                class="text-primary text-sm font-medium hover:underline"
+                                href="">
+                                Forgot your password?
+                            </a>
+                        </p>
+                    </form>
+                </div>
+            </main>
         </div>
-    </main>
+    </div>
 @endsection

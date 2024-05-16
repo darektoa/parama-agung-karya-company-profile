@@ -12,73 +12,72 @@
             bg-base-100
             md:block;
     }
-    
+
     .dashboardSidebar__container {
-        @apply py-4
-            flex
+        @apply flex
             flex-col
-            text-base-content
+            py-4
+            text-base-content;
     }
-    
+
     .dashboardSidebar__container__brandText {
-        @apply ml-6
-            mb-6
+        @apply mb-6
+            ml-6
             flex
             text-lg
             font-bold
             text-base-content;
     }
-    
+
     .sidemenu {
-    
     }
-    
+
     .sidemenu li {
         @apply relative;
     }
-    
+
     .sidemenu li > *:not(ul, .menu-title, details, .btn),
     .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-        @apply px-6
-            py-3
-            inline-flex
+        @apply inline-flex
             w-full
             items-center
+            rounded-l-none
+            px-6
+            py-3
             text-sm
             font-semibold
             transition-colors
-            rounded-l-none
             duration-150;
     }
 
     .sidemenu li > *:not(ul, .menu-title, details, .btn, .active),
     .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title, .active)),
     .sidemenu li > details > summary {
-        @apply active:bg-transparent
+        @apply hover:bg-transparent
             hover:text-black
-            hover:bg-transparent
+            active:bg-transparent
             dark:hover:text-white;
     }
-    
+
     .sidemenu li > *:not(ul, .menu-title, details, .btn).active,
     .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title)).active {
         @apply relative
             text-white;
     }
-    
+
     .sidemenu li > .indicator {
         @apply hidden;
     }
-    
+
     .sidemenu li > *:not(ul, .menu-title, details, .btn).active::before,
     .sidemenu :where(li:not(.menu-title) > details > summary:not(.menu-title)).active::before {
-        @apply content-['']
-            absolute
+        @apply absolute
             inset-y-0
             left-0
             w-1
             rounded-br-lg
             rounded-tr-lg
-            bg-purple-600;
+            bg-purple-600
+            content-[''];
     }
 }

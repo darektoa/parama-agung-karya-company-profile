@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <html
-    lang="id"
-    data-theme="fantasy">
+    x-data="initialData"
+    :data-theme="dark ? 'dark' : null"
+    lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta
@@ -22,13 +23,11 @@
             href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
             rel="stylesheet" />
 
-        @vite([
-            'resources/css/libraries/tailwind.css', 
-            'resources/js/layouts/dashboard/index.js'
-        ])
+        @vite(['resources/css/libraries/tailwind.css'])
         @yield('head')
     </head>
     <body>
         @yield('content')
+        @vite(['resources/js/layouts/dashboard/index.js'])
     </body>
 </html>

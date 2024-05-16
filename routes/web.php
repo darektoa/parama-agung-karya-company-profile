@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -40,7 +41,7 @@ Route::prefix('/auth')->group(function() {
 /**
  * DASHBOARD
  */
-Route::prefix('/dashboard')->name('dashboard')->group(function() {
+Route::prefix('/dashboard')->middleware(['auth.session'])->name('dashboard')->group(function() {
     Route::get('/', [Dashboard\HomeController::class, 'index'])->name('.home');
     
 

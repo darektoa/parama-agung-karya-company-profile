@@ -26,6 +26,11 @@
             <li>
                 <a href="/#contact">Kontak</a>
             </li>
+            <li>
+            <div class="rounded-circle bg-white">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+            </li>
 
             {{--
                 <li>

@@ -6,10 +6,7 @@ function initialData() {
         }
 
         // else return their preferences
-        return (
-            !!window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-        );
+        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
 
     function setThemeToLocalStorage(value) {
@@ -41,7 +38,7 @@ function initialData() {
         closeSideMenu() {
             this.isSideMenuOpen = false;
         },
-        
+
         openModal() {
             this.isModalOpen = true;
             this.trapCleanup = focusTrap(document.querySelector('#modal'));
@@ -50,7 +47,7 @@ function initialData() {
         toggleNotificationsMenu() {
             this.isNotificationsMenuOpen = !this.isNotificationsMenuOpen;
         },
-        
+
         toggleProfileMenu() {
             this.isProfileMenuOpen = !this.isProfileMenuOpen;
         },
@@ -58,7 +55,7 @@ function initialData() {
         togglePagesMenu() {
             this.isPagesMenuOpen = !this.isPagesMenuOpen;
         },
-       
+
         toggleSideMenu() {
             this.isSideMenuOpen = !this.isSideMenuOpen;
         },
@@ -67,7 +64,7 @@ function initialData() {
             this.dark = !this.dark;
             setThemeToLocalStorage(this.dark);
         },
-    }
+    };
 }
 
 export default initialData;

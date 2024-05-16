@@ -3,7 +3,7 @@
         <div class="header d-lg-flex justify-content-between align-items-center py-sm-3 px-sm-2 px-1 py-2">
             <div id="logo">
                 <h1>
-                    <a href="/">
+                    <a href="#" javascript:void(0); onClick="set_flag('EN');">
                         <img
                             src="/images/logo.svg"
                             alt=""

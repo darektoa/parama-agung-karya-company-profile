@@ -3,7 +3,7 @@
 <html
     x-data="initialData"
     :data-theme="dark ? 'dark' : null"
-    lang="us">
+    lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta
