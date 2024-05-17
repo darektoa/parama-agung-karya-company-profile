@@ -41,7 +41,7 @@ Route::prefix('/auth')->group(function() {
 /**
  * DASHBOARD
  */
-Route::prefix('/dashboard')->middleware(['auth.session'])->name('dashboard')->group(function() {
+Route::prefix('/dashboard')->middleware(['auth'])->name('dashboard')->group(function() {
     Route::get('/', [Dashboard\HomeController::class, 'index'])->name('.home');
     
 
