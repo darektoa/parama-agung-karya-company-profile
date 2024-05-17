@@ -66,7 +66,7 @@
                         banner?.remove();
                         review?.remove();
                     }
-                }, 50);
+                }, 80);
             }
 
             window.addEventListener('load', () => {
