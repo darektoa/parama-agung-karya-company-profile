@@ -14,7 +14,7 @@
             <div class="col-lg-7 mt-lg-0 mt-4">
                 <div
                     class="slide-img rounded-4"
-                    style="background-image: url('/images/stocks/wave-design-building.jpg')"></div>
+                    style="background-image: url('/images/stocks/wave-design-building.webp')"></div>
             </div>
         </div>
     </div>
