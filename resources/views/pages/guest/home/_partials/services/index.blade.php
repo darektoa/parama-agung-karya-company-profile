@@ -21,7 +21,7 @@
                     class="w-100 rounded-4 card overflow-hidden border-0 shadow-lg"
                     style="width: 18rem">
                     <img
-                        src="https://source.unsplash.com/random/1920x1080?construction"
+                        src="{{ \StorageHelper::url('seeders/services/thumbnails/22f48e62-acb3-4eb0-a577-c6bdd4045f72.png') }}"
                         class="card-img-top"
                         height="320"
                         alt="..." />
@@ -63,7 +63,7 @@
                     class="w-100 rounded-4 card overflow-hidden border-0 shadow-lg"
                     style="width: 18rem">
                     <img
-                        src="https://source.unsplash.com/random/1920x1080?architect"
+                        src="{{ \StorageHelper::url('seeders/services/thumbnails/403f3fc3-eb66-4253-9e11-f7bb9e634644.png') }}"
                         class="card-img-top"
                         height="320"
                         alt="..." />
