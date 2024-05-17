@@ -1,6 +1,8 @@
 <section class="w-100 bg-light py-2">
     <div class="container">
-        <h2 class="fw-semibold fs-6 mb-1 pt-2 text-center">Klien Kami:</h2>
+        <h2 class="fw-semibold fs-6 mb-1 pt-2 text-center">
+            {{ $contents?->clientTitle?->text }}
+        </h2>
         <div
             class="slide carousel"
             data-bs-ride="carousel">

@@ -16,25 +16,21 @@ class DirectorySeeder extends Seeder
     {
         $pages = [
             // id, name, directory_id, deepth
-            ['3cb496aa-74cf-4ca0-8df5-4602674ee269', 'Beranda'],
-            ['661c78c1-8e46-408f-baec-606d22b188b0', 'Tentang Kami'],
-            ['5298b484-4799-4ae7-a03a-6456de906b59', 'Kontak Kami'],
-            ['12f87012-8f3c-4f70-8b96-e31cd7628fc3', 'Portfolio'],
+            ['661c78c1-8e46-408f-baec-606d22b188b0', 'About Us'],
+            ['5298b484-4799-4ae7-a03a-6456de906b59', 'Contact Us'],
+            ['12f87012-8f3c-4f70-8b96-e31cd7628fc3', 'Project'],
             ['09d52d06-1fce-4364-a8d0-ef15c5f34cd0', 'Blog'],
+            ['3cb496aa-74cf-4ca0-8df5-4602674ee269', 'Certificate'],
+            ['9f9c3f33-8c0a-4d95-bcbd-1e8116787a2d', 'Service'],
+            ['9210c788-75a8-4717-a2b9-034c68749100', 'Client'],
         ];
 
         $sections = [
             // id, name, directory_id, deepth
-            ['fe5c80f1-44fd-4817-b93e-bcbfc5497683', 'Hero', '3cb496aa-74cf-4ca0-8df5-4602674ee269', 1],
-            [null, 'Services', '3cb496aa-74cf-4ca0-8df5-4602674ee269', 1],
-            [null, 'Banner About', '661c78c1-8e46-408f-baec-606d22b188b0', 1],
             [null, 'Overview', '661c78c1-8e46-408f-baec-606d22b188b0', 1],
             [null, 'Our Visions', '661c78c1-8e46-408f-baec-606d22b188b0', 1],
             [null, 'Our Missions', '661c78c1-8e46-408f-baec-606d22b188b0', 1],
-            [null, 'Banner Contact','5298b484-4799-4ae7-a03a-6456de906b59', 1], 
             [null, 'Contact', '5298b484-4799-4ae7-a03a-6456de906b59', 1],
-            ['77d3b7f4-bc39-45a5-a258-c1542213ade9', 'Sub Hero', 'fe5c80f1-44fd-4817-b93e-bcbfc5497683', 2],
-            [null, 'Layer 3 Hero', '77d3b7f4-bc39-45a5-a258-c1542213ade9', 3],
         ];
 
         Directory::insert($this->transform($pages));

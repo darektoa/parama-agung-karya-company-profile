@@ -13,100 +13,7 @@ class ContentSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        $homeHeroContents = [
-            [
-                'name'      => 'Hero Background',
-                'codename'  => 'homeHeroBackground',
-                'text'      => null,
-                'order'     => 1,
-            ],
-            [
-                'name'      => 'Title',
-                'codename'  => 'homeHeroTitle',
-                'text'      => 'PT Parama Agung Karya',
-                'order'     => 2,
-            ],
-            [
-                'name'      => 'Description',
-                'codename'  => 'homeHeroDescription',
-                'text'      => 'Mengerjakan dan menyediakan bahan bangunan civil dan konstruksi, perawatan gedung/bangunan, dan elektrikal',
-                'order'     => 3,
-            ],
-            [
-                'name'      => 'Featured Card 1',
-                'codename'  => 'homeHeroFeaturedCard1',
-                'text'      => 'Civil & Konstruksi',
-                'order'     => 4,
-            ],
-            [
-                'name'      => 'Featured Card 2',
-                'codename'  => 'homeHeroFeaturedCard2',
-                'text'      => 'Perawatan Bangunan',
-                'order'     => 5,
-            ],
-            [
-                'name'      => 'Featured Card 3',
-                'codename'  => 'homeHeroFeaturedCard3',
-                'text'      => 'Elektrikal',
-                'order'     => 6,
-            ]
-        ];
-
-        $homeServicesContents = [
-            [
-                'name'      => 'Title',
-                'codename'  => 'homeServicesTitle',
-                'text'      => 'Layanan Kami',
-                'order'     => 1,
-            ],
-            [
-                'name'      => 'Service Title 1',
-                'codename'  => 'homeServiceTitle1',
-                'text'      => 'Civil Dan Konstruksi',
-                'order'     => 2,
-            ],
-            [
-                'name'      => 'Service Description 1',
-                'codename'  => 'homeServiceDescription1',
-                'text'      => 'Mengerjakan pekerjaan serta menyediakan bahan bangunan civil dan konstruksi dari mulai design layout perancangan bentuk dan bangunan serta pelaksanaan.',
-                'order'     => 3,
-            ],
-            [
-                'name'      => 'Service Title 2',
-                'codename'  => 'homeServiceTitle2',
-                'text'      => 'Perawatan Bangunan',
-                'order'     => 4,
-            ],
-            [
-                'name'      => 'Service Description 2',
-                'codename'  => 'homeServiceDescription2',
-                'text'      => 'Menyediakan dan pengadaan material sesuai dengan kebutuhan, tenaga kerja baik sistem kerja borongan maupun harian.',
-                'order'     => 5,
-            ],
-            [
-                'name'      => 'Service Title 3',
-                'codename'  => 'homeServiceTitle3',
-                'text'      => 'Elektrikal',
-                'order'     => 6,
-            ],
-            [
-                'name'      => 'Service Description 3',
-                'codename'  => 'homeServiceDescription3',
-                'text'      => 'Menyediakan dan pengadaan material pemasangan sesuai dengan kebutuhan',
-                'order'     => 7,
-            ],
-        ];
-        
-        $aboutBannerContents = [
-            [
-                'name'      => 'Banner About',
-                'codename'  => 'aboutBannerBackground',
-                'text'      => null,
-                'order'     => 1,
-            ],
-        ];
-        
+    {   
         $aboutOverviewContents = [
             [
                 'name'      => 'Title Overview',
@@ -185,11 +92,29 @@ class ContentSeeder extends Seeder
             ],
         ];
 
-        $contactBannerContents = [
+        $blogContents = [
             [
-                'name'      => 'Banner Contact',
-                'codename'  => 'contactBannerBackground',
-                'text'      => null,
+                'name'      => 'Title',
+                'codename'  => 'blogTitle',
+                'text'      => 'Berita Terupdate Tentang Kami',
+                'order'     => 1,
+            ],
+        ];
+
+        $certificateContents = [
+            [
+                'name'      => 'Title',
+                'codename'  => 'certificateTitle',
+                'text'      => 'Sertifikasi Kami',
+                'order'     => 1,
+            ],
+        ];
+
+        $clientContents = [
+            [
+                'name'      => 'Title',
+                'codename'  => 'clientTitle',
+                'text'      => 'Klien Kami:',
                 'order'     => 1,
             ],
         ];
@@ -232,28 +157,25 @@ class ContentSeeder extends Seeder
                 'order'     => 7,
             ],
         ];
-        
 
-        foreach($homeHeroContents as $content) {
-            Directory::where('codename', 'hero')
-                ->first()
-                ->contents()
-                ->create($content);
-        }
+        $projectContents = [
+            [
+                'name'      => 'Title',
+                'codename'  => 'projectTitle',
+                'text'      => 'Proyek Terbaru Kami',
+                'order'     => 1,
+            ],
+        ];
 
-        foreach($homeServicesContents as $content) {
-            Directory::where('codename', 'services')
-                ->first()
-                ->contents()
-                ->create($content);
-        }
 
-        foreach($aboutBannerContents as $content) {
-            Directory::where('codename', 'bannerAbout')
-                ->first()
-                ->contents()
-                ->create($content);
-        }
+        $serviceContents = [
+            [
+                'name'      => 'Title',
+                'codename'  => 'serviceTitle',
+                'text'      => 'Layanan Kami',
+                'order'     => 1,
+            ],
+        ];
 
         foreach($aboutOverviewContents as $content) {
             Directory::where('codename', 'overview')
@@ -275,9 +197,23 @@ class ContentSeeder extends Seeder
                 ->contents()
                 ->create($content);
         }
+        
+        foreach($blogContents as $content) {
+            Directory::where('codename', 'blog')
+                ->first()
+                ->contents()
+                ->create($content);
+        }
 
-        foreach($contactBannerContents as $content) {
-            Directory::where('codename', 'bannerContact')
+        foreach($certificateContents as $content) {
+            Directory::where('codename', 'certificate')
+                ->first()
+                ->contents()
+                ->create($content);
+        }
+
+        foreach($clientContents as $content) {
+            Directory::where('codename', 'client')
                 ->first()
                 ->contents()
                 ->create($content);
@@ -285,6 +221,20 @@ class ContentSeeder extends Seeder
 
         foreach($contactContactContents as $content) {
             Directory::where('codename', 'contact')
+                ->first()
+                ->contents()
+                ->create($content);
+        }
+
+        foreach($projectContents as $content) {
+            Directory::where('codename', 'project')
+                ->first()
+                ->contents()
+                ->create($content);
+        }
+
+        foreach($serviceContents as $content) {
+            Directory::where('codename', 'service')
                 ->first()
                 ->contents()
                 ->create($content);

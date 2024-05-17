@@ -1,6 +1,6 @@
 <div class="container">
     <div class="wthree_pvt_title mb-5">
-        <h4 class="w3pvt-title">Berita Terupdate Tentang Kami</h4>
+        <h4 class="w3pvt-title">{{ $contents?->blogTitle?->text }}</h4>
         {{-- <p class="sub-title text-left mx-0 text-secondary">&nbsp;</p> --}}
     </div>
     <div class="">

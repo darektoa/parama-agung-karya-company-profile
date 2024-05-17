@@ -12,7 +12,7 @@
     ">
     <div class="container py-5">
         <div class="mb-5 text-center">
-            <h4 class="w3pvt-title">{{ $contents?->homeServicesTitle?->text }}</h4>
+            <h4 class="w3pvt-title">{{ $contents?->serviceTitle?->text }}</h4>
             <p class="sub-title"></p>
         </div>
         <div class="row">
