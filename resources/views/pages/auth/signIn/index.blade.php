@@ -8,12 +8,12 @@
                     <img
                         aria-hidden="true"
                         class="h-full w-full object-cover dark:hidden"
-                        src="{{ asset('images/stocks/login-office.jpeg') }}"
+                        src="{{ asset('images/stocks/login-office.webp') }}"
                         alt="Office" />
                     <img
                         aria-hidden="true"
                         class="hidden h-full w-full object-cover dark:block"
-                        src="{{ asset('images/stocks/login-office-dark.jpeg') }}"
+                        src="{{ asset('images/stocks/login-office-dark.webp') }}"
                         alt="Office" />
                 </div>
 

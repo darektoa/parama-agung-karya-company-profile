@@ -1,4 +1,8 @@
 {
+  "_module.esm-BMLKtZq_.js": {
+    "file": "assets/module.esm-BMLKtZq_.js",
+    "name": "module.esm"
+  },
   "public/fonts/fa-brands-400.ttf": {
     "file": "assets/fa-brands-400-DHHcbFjz.ttf",
     "src": "public/fonts/fa-brands-400.ttf"
@@ -32,7 +36,7 @@
     "src": "public/fonts/fa-v4compatibility.woff2"
   },
   "resources/css/layouts/dashboard/index.css": {
-    "file": "assets/index-nAt5GxLV.css",
+    "file": "assets/index-4cjPMgsU.css",
     "src": "resources/css/layouts/dashboard/index.css",
     "isEntry": true
   },
@@ -42,20 +46,26 @@
     "isEntry": true
   },
   "resources/css/libraries/tailwind.css": {
-    "file": "assets/tailwind-_8CT1_Jf.css",
+    "file": "assets/tailwind-DFEKJaUu.css",
     "src": "resources/css/libraries/tailwind.css",
     "isEntry": true
   },
   "resources/js/layouts/dashboard/index.js": {
-    "file": "assets/index-BjK-sgDp.js",
+    "file": "assets/index-C5oySRtj.js",
     "name": "index",
     "src": "resources/js/layouts/dashboard/index.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_module.esm-BMLKtZq_.js"
+    ]
   },
   "resources/js/layouts/guest/index.js": {
-    "file": "assets/index-DJ-So8VZ.js",
+    "file": "assets/index-Bg4HPs2W.js",
     "name": "index",
     "src": "resources/js/layouts/guest/index.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_module.esm-BMLKtZq_.js"
+    ]
   }
 }

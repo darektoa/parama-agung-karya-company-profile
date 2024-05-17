@@ -4,7 +4,7 @@
     <div
         class="h-100 position-absolute container top-0 z-0"
         style="
-            background: url('/images/stocks/vision-illustration.jpeg') no-repeat right top;
+            background: url('/images/stocks/vision-illustration.webp') no-repeat right top;
             filter: grayscale(0.5);
         "></div>
     <div class="position-relative container">
