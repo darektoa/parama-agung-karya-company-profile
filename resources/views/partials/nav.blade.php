@@ -10,7 +10,7 @@
         <input
             type="checkbox"
             id="drop" />
-        <ul class="menu">
+        <ul class="d-flex align-items-center menu">
             <li>
                 <a href="/#home">Beranda</a>
             </li>
@@ -26,10 +26,34 @@
             <li>
                 <a href="/#contact">Kontak</a>
             </li>
-            <li>
-            <div class="rounded-circle bg-white">
-                    <i class="fa-solid fa-language"></i>
-                </div>
+            <li class="dropdown">
+                <button
+                    class="btn-dark dropdown-toggle btn border-0 bg-transparent"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-language text-white"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <button
+                            class="dropdown-item"
+                            translate="no"
+                            href="#"
+                            x-on:click="changeTranslate('id')">
+                            Indonesia
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            class="dropdown-item"
+                            translate="no"
+                            href="#"
+                            x-on:click="changeTranslate('en')">
+                            English
+                        </button>
+                    </li>
+                </ul>
             </li>
 
             {{--
@@ -81,3 +105,15 @@
         </ul>
     </nav>
 </div>
+
+@push('scripts-stack')
+    <script>
+        function changeTranslate(lang) {
+            const select = document.querySelector('.goog-te-combo');
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+            document.documentElement.setAttribute('lang', lang);
+            removeGoogleTranslateBanner();
+        }
+    </script>
+@endpush
