@@ -18,7 +18,7 @@
                 <div class="h-[32rem] w-full">
                     <iframe
                         class="h-full w-full rounded-xl"
-                        src="http://paramaagungkarya.co.id/"
+                        src="https://paramaagungkarya.co.id/"
                         frameborder="0"></iframe>
                 </div>
             </div>
