@@ -112,7 +112,6 @@
             const select = document.querySelector('.goog-te-combo');
             select.value = lang;
             select.dispatchEvent(new Event('change'));
-            document.documentElement.setAttribute('lang', lang);
             removeGoogleTranslateBanner();
         }
     </script>

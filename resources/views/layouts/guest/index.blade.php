@@ -59,12 +59,14 @@
                     const clickEvnt = new Event('click');
                     const banner = document.getElementById(':1.container');
                     const review = document.getElementById('goog-gt-tt');
+                    const loading = document.querySelector('.VIpgJd-ZVi9od-aZ2wEe-wOHMyf');
                     document.body.removeAttribute('style');
 
                     if (!banner) clearInterval(intervalID);
                     else {
                         banner?.remove();
                         review?.remove();
+                        loading?.remove();
                     }
                 }, 80);
             }
