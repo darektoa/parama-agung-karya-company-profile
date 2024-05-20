@@ -28,7 +28,7 @@
             </li>
             <li class="dropdown">
                 <button
-                    class="btn-dark dropdown-toggle btn border-0 bg-transparent py-0"
+                    class="btn-dark dropdown-toggle btn border-0 bg-transparent pt-0"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
