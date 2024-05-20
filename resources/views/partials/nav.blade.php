@@ -10,7 +10,7 @@
         <input
             type="checkbox"
             id="drop" />
-        <ul class="d-flex align-items-center menu">
+        <ul class="menu">
             <li>
                 <a href="/#home">Beranda</a>
             </li>
@@ -28,7 +28,7 @@
             </li>
             <li class="dropdown">
                 <button
-                    class="btn-dark dropdown-toggle btn border-0 bg-transparent"
+                    class="btn-dark dropdown-toggle btn border-0 bg-transparent py-0"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
