@@ -9,10 +9,11 @@
         </li>
         <li>
             <a
-                href="{{ route('dashboard.banners') }}"
+                href="{{ route('dashboard.service') }}"
                 class="text-base-content">
-                Banners
+                Services
             </a>
         </li>
+        <li>Edit Service</li>
     </ul>
 </div>

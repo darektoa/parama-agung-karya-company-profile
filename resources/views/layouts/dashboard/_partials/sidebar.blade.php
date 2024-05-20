@@ -13,6 +13,7 @@
             @include('layouts.dashboard._partials.sidemenu.certificates.index')
             @include('layouts.dashboard._partials.sidemenu.blogs.index')
             @include('layouts.dashboard._partials.sidemenu.portfolios.index')
+            @include('layouts.dashboard._partials.sidemenu.services.index')
             @include('layouts.dashboard._partials.sidemenu.contents.index')
         </ul>
     </div>

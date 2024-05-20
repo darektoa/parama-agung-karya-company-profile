@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             Content\DirectorySeeder::class,
             Content\ContentSeeder::class,
             Portfolio\PortfolioSeeder::class,
+            Service\ServiceSeeder::class,
         ]);
     }
 }

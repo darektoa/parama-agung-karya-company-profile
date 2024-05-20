@@ -10,6 +10,7 @@ use App\Models\Certificate\Certificate;
 use App\Models\Client\Client;
 use App\Models\Content\{Content, Page};
 use App\Models\Portfolio\Portfolio;
+use App\Models\Service\Service;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -42,6 +43,10 @@ class HomeController extends Controller
             ->limit(3)
             ->latest()
             ->get();
+
+        $services = Service::with(['thumbnail'])
+            ->latest()
+            ->get();
             
         $contents = CollectionHelper::toObject(
             Content::orderBy('order')
@@ -59,6 +64,7 @@ class HomeController extends Controller
                 'clients' => $clients,
                 'contents' => $contents,
                 'projects' => $projects,
+                'services' => $services,
             ]);
     }
 }

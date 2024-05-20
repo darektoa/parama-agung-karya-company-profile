@@ -131,4 +131,20 @@ Route::prefix('/dashboard')->middleware(['auth'])->name('dashboard')->group(func
             Route::get('/edit', [Dashboard\PortfolioController::class, 'edit'])->name('.edit');
         });
     });
+    
+
+    // DASHBOARD/SERVICES
+    Route::prefix('/services')->name('.service')->group(function() {
+        Route::get('/', [Dashboard\ServiceController::class, 'index']);
+        Route::post('/', [Dashboard\ServiceController::class, 'store'])->name('.post');
+        Route::get('/create', [Dashboard\ServiceController::class, 'create'])->name('.create');
+        
+        // DASHBOARD/SERVICES/BY_SERVICE_ID
+        Route::prefix('/{serviceId}')->name('.byServiceId')->group(function() {
+            Route::get('/', [Dashboard\ServiceController::class, 'show']);
+            Route::put('/', [Dashboard\ServiceController::class, 'update'])->name('.put');
+            Route::delete('/', [Dashboard\ServiceController::class, 'destroy'])->name('.delete');
+            Route::get('/edit', [Dashboard\ServiceController::class, 'edit'])->name('.edit');
+        });
+    });
 });

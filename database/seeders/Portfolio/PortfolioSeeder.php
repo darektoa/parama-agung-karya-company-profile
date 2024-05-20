@@ -14,7 +14,7 @@ class PortfolioSeeder extends Seeder
      */
     public function run(): void
     {
-        $blogs = [
+        $portfolios = [
             [
                 'id'        => '9c0c115c-1176-430f-bad6-1a5530d377d0',
                 'slug'      => Str::slug('Civil and Construction Project'),
@@ -41,13 +41,13 @@ class PortfolioSeeder extends Seeder
             ],
         ];
 
-        $blogs = collect($blogs)->map(fn($blog, $index) => ([
-            ...$blog,
+        $portfolios = collect($portfolios)->map(fn($portfolio, $index) => ([
+            ...$portfolio,
             'created_at' => now()->addMinutes($index),
             'updated_at' => now()->addMinutes($index),
         ]));
 
-        Portfolio::insert($blogs->toArray());
+        Portfolio::insert($portfolios->toArray());
         $this->call(ThumbnailSeeder::class);
     }
 }
