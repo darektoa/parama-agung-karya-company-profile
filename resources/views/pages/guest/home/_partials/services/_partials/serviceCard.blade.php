@@ -19,14 +19,14 @@
                             class="accordion-button collapsed w-100 btn-primary"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
+                            data-bs-target="#serviceItem-{{ $service->id }}"
                             aria-expanded="false"
-                            aria-controls="collapseOne">
+                            aria-controls="serviceItem-{{ $service->id }}">
                             Lihat Detailnya
                         </button>
                     </h2>
                     <div
-                        id="collapseOne"
+                        id="serviceItem-{{ $service->id }}"
                         class="accordion-collapse collapse"
                         data-bs-parent="#detailAccordionOne">
                         <div class="accordion-body">
