@@ -1,3 +1,5 @@
+import updateImageOnChange from '../../utilities/updateImageOnChange.js';
+
 function initialData() {
     function getThemeFromLocalStorage() {
         // if user already changed the theme, use it
@@ -64,6 +66,8 @@ function initialData() {
             this.dark = !this.dark;
             setThemeToLocalStorage(this.dark);
         },
+
+        updateImageOnChange,
     };
 }
 

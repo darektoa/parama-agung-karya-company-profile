@@ -15,3 +15,5 @@ function toDataURL(file) {
 
     return promise;
 }
+
+export default toDataURL;

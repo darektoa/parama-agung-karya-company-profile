@@ -23,7 +23,7 @@
                     class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
                     <input
                         required
-                        id="inputThumbnail"
+                        x-on:change="(e) => { updateImageOnChange(e, 'thumbnail') }"
                         type="file"
                         name="thumbnail"
                         class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />

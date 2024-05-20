@@ -36,7 +36,7 @@
     "src": "public/fonts/fa-v4compatibility.woff2"
   },
   "resources/css/layouts/dashboard/index.css": {
-    "file": "assets/index-Df-mO2f7.css",
+    "file": "assets/index-DA3gBw1w.css",
     "src": "resources/css/layouts/dashboard/index.css",
     "isEntry": true
   },
@@ -46,12 +46,12 @@
     "isEntry": true
   },
   "resources/css/libraries/tailwind.css": {
-    "file": "assets/tailwind-BGrzCkG7.css",
+    "file": "assets/tailwind-Blo24hPK.css",
     "src": "resources/css/libraries/tailwind.css",
     "isEntry": true
   },
   "resources/js/layouts/dashboard/index.js": {
-    "file": "assets/index-C5oySRtj.js",
+    "file": "assets/index-B6-uQ2UX.js",
     "name": "index",
     "src": "resources/js/layouts/dashboard/index.js",
     "isEntry": true,

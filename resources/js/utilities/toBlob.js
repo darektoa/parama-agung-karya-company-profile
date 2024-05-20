@@ -16,3 +16,5 @@ function toBlob(file) {
 
     return promise;
 }
+
+export default toBlob;

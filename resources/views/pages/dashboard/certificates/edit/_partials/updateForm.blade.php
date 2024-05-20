@@ -29,7 +29,7 @@
                 <div
                     class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
                     <input
-                        id="inputImage"
+                        x-on:change="(e) => { updateImageOnChange(e, 'image1') }"
                         type="file"
                         name="images[]"
                         class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />
@@ -78,26 +78,3 @@
         SAVE
     </button>
 </form>
-
-@section('scripts')
-    <script type="module">
-        const elmnt = document.getElementById('inputImage').addEventListener('change', async (evt) => {
-            const baseURL = '{{ route('dashboard.certificates.byCertificateId.put', request()->certificateId) }}';
-            const file = evt.target.files[0];
-            const formData = new FormData();
-
-            const imagesDataURL = await toDataURL(file);
-            const imagesBlob = await toBlob(file);
-            document.getElementById('image1').src = imagesDataURL;
-
-            formData.append('_method', 'PUT');
-            formData.append('_token', '{{ csrf_token() }}');
-            formData.append('images[]', imagesBlob);
-
-            // fetch(baseURL, {
-            //     method: 'POST',
-            //     body: formData,
-            // });
-        });
-    </script>
-@endsection

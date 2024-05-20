@@ -23,6 +23,7 @@
                     class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
                     <input
                         required
+                        x-on:change="(e) => { updateImageOnChange(e, 'image1') }"
                         id="inputImage"
                         type="file"
                         name="image"
@@ -40,7 +41,7 @@
 </form>
 
 @section('scripts')
-    <script>
+    {{-- <script>
         const elmnt = document.getElementById('inputImage').addEventListener('change', async (evt) => {
             const baseURL = '{{ route('dashboard.banners.post') }}';
             const file = evt.target.files[0];
@@ -58,5 +59,5 @@
             //     body: formData,
             // });
         });
-    </script>
+    </script> --}}
 @endsection

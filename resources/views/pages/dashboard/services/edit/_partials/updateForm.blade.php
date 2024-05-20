@@ -13,6 +13,7 @@
         <div class="group/contentEditorImageInputCard relative w-full max-w-80 overflow-hidden rounded-lg">
             <figure class="w-full bg-base-300 object-contain">
                 <img
+                    id="thumbnail"
                     src="{{ $service->thumbnail?->uri ? \StorageHelper::url($service->thumbnail?->uri) : '/images/illustrations/snap_the_moment_bg.svg' }}"
                     class="aspect-video w-80"
                     alt="" />
@@ -22,6 +23,7 @@
                 <div
                     class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
                     <input
+                        x-on:change="(e) => { updateImageOnChange(e, 'thumbnail') }"
                         type="file"
                         name="thumbnail"
                         class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />

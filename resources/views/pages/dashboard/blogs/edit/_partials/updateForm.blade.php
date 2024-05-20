@@ -23,7 +23,7 @@
                 <div
                     class="absolute z-50 flex h-full w-full scale-0 p-4 transition-all duration-300 group-hover/contentEditorImageInputCardForeground:scale-100">
                     <input
-                        id="inputThumbnail"
+                        x-on:change="(e) => { updateImageOnChange(e, 'thumbnail') }"
                         type="file"
                         name="thumbnail"
                         class="file-input-default file-input file-input-bordered file-input-sm mt-auto w-full" />
@@ -72,67 +72,3 @@
         SAVE
     </button>
 </form>
-
-<script>
-    function isBloabable(file) {
-        const { type } = file;
-
-        return type.startsWith('image/') || type.startsWith('video/') || type.startsWith('audio/');
-    }
-
-    function toBlob(file) {
-        const fileReader = new FileReader();
-        fileReader.readAsArrayBuffer(file);
-
-        const promise = new Promise((resolve, reject) => {
-            fileReader.addEventListener('load', (event) => {
-                const arrayBuffer = event.target.result;
-                const blob = new Blob([arrayBuffer]);
-                resolve(blob);
-            });
-
-            fileReader.addEventListener('error', (event) => {
-                reject(null);
-            });
-        });
-
-        return promise;
-    }
-
-    function toDataURL(file) {
-        const fileReader = new FileReader();
-        fileReader.readAsDataURL(file);
-
-        const promise = new Promise((resolve, reject) => {
-            fileReader.addEventListener('load', (event) => {
-                const dataURL = event.target.result;
-                resolve(dataURL);
-            });
-
-            fileReader.addEventListener('error', (event) => {
-                reject(null);
-            });
-        });
-
-        return promise;
-    }
-
-    const elmnt = document.getElementById('inputThumbnail').addEventListener('change', async (evt) => {
-        const baseURL = '{{ route('dashboard.blog.byBlogId.put', request()->blogId) }}';
-        const file = evt.target.files[0];
-        const formData = new FormData();
-
-        const thumbnailDataURL = await toDataURL(file);
-        const thumbnailBlob = await toBlob(file);
-        document.getElementById('thumbnail').src = thumbnailDataURL;
-
-        formData.append('_method', 'PUT');
-        formData.append('_token', '{{ csrf_token() }}');
-        formData.append('thumbnail', thumbnailBlob);
-
-        fetch(baseURL, {
-            method: 'POST',
-            body: formData,
-        });
-    });
-</script>
