@@ -3,14 +3,14 @@
         <li>
             <a
                 href="{{ route('dashboard.home') }}"
-                class="text-neutral-content">
+                class="text-base-content">
                 Home
             </a>
         </li>
         <li>
             <a
                 href="{{ route('dashboard.clients') }}"
-                class="text-neutral-content">
+                class="text-base-content">
                 Clients
             </a>
         </li>
