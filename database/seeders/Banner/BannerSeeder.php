@@ -13,6 +13,7 @@ class BannerSeeder extends Seeder
      */
     public function run(): void
     {
+        
         $banners = [
             [
                 'id'    => '9c0a278a-f8e6-4bb6-83b5-1efd7c5e4c40',

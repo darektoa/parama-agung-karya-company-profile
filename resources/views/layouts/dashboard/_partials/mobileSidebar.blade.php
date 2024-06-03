@@ -8,7 +8,7 @@
     x-transition:leave-end="opacity-0"
     class="fixed inset-0 z-50 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"></div>
 <aside
-    class="fixed inset-y-0 z-50 mt-16 w-64 flex-shrink-0 overflow-y-auto bg-white md:hidden dark:bg-gray-800"
+    class="fixed inset-y-0 z-50 mt-16 w-64 flex-shrink-0 overflow-y-auto bg-white md:hidden dark:bg-base-100"
     x-show="isSideMenuOpen"
     x-transition:enter="transition duration-150 ease-in-out"
     x-transition:enter-start="-translate-x-20 transform opacity-0"
