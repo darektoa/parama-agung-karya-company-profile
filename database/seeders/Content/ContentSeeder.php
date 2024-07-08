@@ -13,7 +13,7 @@ class ContentSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {   
+    {
         $aboutOverviewContents = [
             [
                 'name'      => 'Title Overview',
@@ -26,7 +26,7 @@ class ContentSeeder extends Seeder
                 'codename'  => 'aboutOverviewDescription',
                 'text'      => "
                     Puji Syukur kami panjatkan kepada Tuhan Yang Maha Kuasa, karena atas berkat, rahmat, kasih saying, dan izin-Nya, kami dapat memperkenalkan PT. Parama Agung Karya melalui web Company Profile.\n
-                    PT. Parama Agung Karya merupakan Perusahaan Swasta, yang bergerak di bidang konstruksi dan non-konstruksi seperti furniture hal tersebut merupakan komitmen kami terhadap pengguna jasa.\n 
+                    PT. Parama Agung Karya merupakan Perusahaan Swasta, yang bergerak di bidang konstruksi dan non-konstruksi seperti furniture hal tersebut merupakan komitmen kami terhadap pengguna jasa.\n
                     PT. Parama Agung Karya membantu dalam pekerjaan-pekerjaan anda, yang sesuai dengan keahlian kami.\n",
                 'order'     => 2,
             ],
@@ -90,6 +90,18 @@ class ContentSeeder extends Seeder
                 'text'      => 'Menguatkan hubungan kerjasama dengan semangat loyalitas.',
                 'order'     => 5,
             ],
+            [
+                'name'      => 'Title Mission 4',
+                'codename'  => 'aboutMissionTitle4',
+                'text'      => 'Kontribusi Positif',
+                'order'     => 6,
+            ],
+            [
+                'name'      => 'Description Mission 4',
+                'codename'  => 'aboutMissionDescription4',
+                'text'      => 'Berkontribusi positif terhadap pembangunan masyarakat dan lingkungan sekitar.',
+                'order'     => 7,
+            ],
         ];
 
         $blogContents = [
@@ -118,7 +130,7 @@ class ContentSeeder extends Seeder
                 'order'     => 1,
             ],
         ];
-        
+
         $contactContactContents = [
             [
                 'name'      => 'Title',
@@ -197,7 +209,7 @@ class ContentSeeder extends Seeder
                 ->contents()
                 ->create($content);
         }
-        
+
         foreach($blogContents as $content) {
             Directory::where('codename', 'blog')
                 ->first()

@@ -8,7 +8,7 @@
                         javascript:void(0);
                         onClick="set_flag('EN');">
                         <img
-                            src="/images/logo.svg"
+                            src="/images/logo-white.svg"
                             alt=""
                             width="40"
                             height="40" />
