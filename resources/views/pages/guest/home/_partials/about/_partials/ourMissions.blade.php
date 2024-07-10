@@ -56,7 +56,7 @@
                         </div>
                         <div class="col-md-6 service-title mt-4">
                             <h4 class="home-title text-theme">
-                                {{ $contents->aboutMissionTitle4->text }}
+                                {{ $contents->aboutMissionTitle3->text }}
                             </h4>
                             <p class="sec-4">
                                 {{ $contents->aboutMissionDescription3->text }}
@@ -67,7 +67,7 @@
                                 {{ $contents->aboutMissionTitle4->text }}
                             </h4>
                             <p class="sec-4">
-                                {{ $contents->aboutMissionDescription3->text }}
+                                {{ $contents->aboutMissionDescription4->text }}
                             </p>
                         </div>
                     </div>

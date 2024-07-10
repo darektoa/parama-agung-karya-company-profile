@@ -17,9 +17,9 @@
             <li>
                 <a href="/#about">Tentang Kami</a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="/#projects">Proyek</a>
-            </li>
+            </li> --}}
             <li>
                 <a href="/#services">Layanan</a>
             </li>

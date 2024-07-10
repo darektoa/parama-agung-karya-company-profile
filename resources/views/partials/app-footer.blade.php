@@ -37,9 +37,9 @@
                         <li class="my-2">
                             <a href="#about">Tentang Kami</a>
                         </li>
-                        <li class="my-2">
+                        {{-- <li class="my-2">
                             <a href="#projects">Projek</a>
-                        </li>
+                        </li> --}}
                         <li class="mb-2">
                             <a href="#services">Layanan</a>
                         </li>

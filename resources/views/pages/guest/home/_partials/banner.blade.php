@@ -4,7 +4,7 @@
     <div
         id="heroCarousel"
         class="slide position-absolute w-100 h-100 carousel top-0">
-        <div class="carousel-indicators">
+        {{-- <div class="carousel-indicators">
             @foreach ($banners as $banner)
                 <button
                     type="button"
@@ -16,9 +16,9 @@
                         class="active"
                     @endif></button>
             @endforeach
-        </div>
+        </div> --}}
         <div class="carousel-inner h-100">
-            @foreach ($banners as $banner)
+            @foreach ($banners->take(1) as $banner)
                 <div class="h-100 @if($loop->iteration === 1) active @endif carousel-item">
                     <img
                         src="{{ \StorageHelper::url($banner->uri) }}"
@@ -27,7 +27,7 @@
                 </div>
             @endforeach
         </div>
-        <button
+        {{-- <button
             class="carousel-control-prev"
             type="button"
             data-bs-target="#heroCarousel"
@@ -46,6 +46,6 @@
                 class="carousel-control-next-icon"
                 aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-        </button>
+        </button> --}}
     </div>
 </section>
