@@ -20,3 +20,4 @@ yarn-error.log
 
 !/public/storage/seeders/
 !/public/storage/seeders/**
+.vercel
