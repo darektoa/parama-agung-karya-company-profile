@@ -40,6 +40,5 @@
         "env": {
             "COMPOSER_ALLOW_SUPERUSER": "1"
         }
-    },
-    "buildCommand": "composer install --no-dev --optimize-autoloader && composer run vercel-build"
+    }
 }
