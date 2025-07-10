@@ -35,5 +35,5 @@ jobs:
             - name: Deploy to Vercel
               run: vercel deploy --prod --token=e9VPd1ztmE8L61OCsSk6JJ5Y
               env:
-                VERCEL_ORG_ID: prj_KmGGjZpmU5un6PjbpEuRB7tNy3Yd
-                VERCEL_PROJECT_ID: team_9NN245EkWKW9CPvAkSFn4OfY
+                VERCEL_ORG_ID: team_9NN245EkWKW9CPvAkSFn4OfY
+                VERCEL_PROJECT_ID: prj_KmGGjZpmU5un6PjbpEuRB7tNy3Yd
