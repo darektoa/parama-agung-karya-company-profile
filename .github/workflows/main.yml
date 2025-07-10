@@ -1,6 +1,6 @@
 on:
     push:
-        branches: main
+        branches: deploy/vercel
 jobs:
     deploy:
         name: Deploy
