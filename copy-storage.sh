@@ -1,5 +1,7 @@
 #!/bin/sh
 
+ls -a public
+
 # Hapus public/storage jika ada (folder atau symlink)
 rm -rf public/storage/
 
