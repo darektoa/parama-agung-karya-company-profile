@@ -14,10 +14,6 @@
             "dest": "/build/$1"
         },
         {
-            "src": "/storage/(.*)",
-            "dest": "/storage/app/public/$1"
-        },
-        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
@@ -44,5 +40,6 @@
         "env": {
             "COMPOSER_ALLOW_SUPERUSER": "1"
         }
-    }
+    },
+    "buildCommand": "npm run build && mkdir -p public/storage && cp -r storage/app/public/* public/storage/"
 }
