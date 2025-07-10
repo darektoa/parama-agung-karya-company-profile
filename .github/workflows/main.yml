@@ -21,7 +21,7 @@ jobs:
 
             - name: Migrate DB
               run: |
-                php artisan migrate --force
+                php artisan migrate --force --seed
               env:
                 APP_ENV: production
                 DB_CONNECTION: sqlite
