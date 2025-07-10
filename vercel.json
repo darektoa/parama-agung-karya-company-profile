@@ -45,5 +45,5 @@
             "COMPOSER_ALLOW_SUPERUSER": "1"
         }
     },
-    "buildCommand": "npm run build && ls -a public && copy-storage.sh"
+    "buildCommand": "npm run build && ls -a public"
 }
