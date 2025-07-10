@@ -19,6 +19,10 @@
         }
     ],
     "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://paramaagungkarya.vercel.app",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -30,12 +34,12 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
 
-        "DB_CONNECTION": "sqlite",
-        "DB_DATABASE": "/tmp/database.sqlite"
+        "DB_CONNECTION": "sqlite"
     },
     "build": {
         "env": {
             "COMPOSER_ALLOW_SUPERUSER": "1"
         }
-    }
+    },
+    "buildCommand": "composer install --no-dev --optimize-autoloader && composer run vercel-build"
 }
