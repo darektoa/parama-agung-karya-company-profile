@@ -1,2 +1,14 @@
-/vendor
-/public/build
+node_modules/
+vendor/
+storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+.env
+.env.*
+.git/
+.github/
+tests/
+*.log
+.DS_Store
+Thumbs.db
