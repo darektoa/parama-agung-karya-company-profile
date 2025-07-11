@@ -10,8 +10,16 @@
     "outputDirectory": "public",
     "routes": [
         {
+            "src": "/public($|/.*)",
+            "status": 404
+        },
+        {
             "src": "/storage/(.*)",
             "dest": "/storage/$1"
+        },
+        {
+            "src": "/images/(.*)",
+            "dest": "/images/$1"
         },
         {
             "src": "/build/(.*)",
