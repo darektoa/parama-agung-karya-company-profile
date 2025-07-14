@@ -1,5 +1,5 @@
 <?php
 
-echo __DIR__;
+exec('sh copy-storage.sh');
 
 require __DIR__ . '/../public/index.php';
