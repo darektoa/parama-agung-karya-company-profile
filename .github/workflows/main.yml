@@ -21,7 +21,7 @@ jobs:
 
             - name: Migrate DB
               run: |
-                php artisan migrate --force --seed
+                php artisan migrate:fresh --force --seed
                 #php artisan storage:link
               env:
                 APP_ENV: production
